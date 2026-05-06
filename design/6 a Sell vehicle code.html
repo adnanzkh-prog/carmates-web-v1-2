@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sell Your Car - The Mateship</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#dbdad5",
+                        "secondary-container": "#e4e2e1",
+                        "primary-fixed-dim": "#ffb4ac",
+                        "outline-variant": "#e7bdb8",
+                        "outline": "#926e6b",
+                        "surface-container-highest": "#e4e2dd",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#adc7ff",
+                        "on-primary-container": "#fff9f8",
+                        "secondary": "#5f5e5e",
+                        "inverse-primary": "#ffb4ac",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e4e2dd",
+                        "surface-container-low": "#f5f3ee",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#e4e2e1",
+                        "surface-container-high": "#eae8e3",
+                        "on-secondary-fixed-variant": "#474747",
+                        "primary": "#b90014",
+                        "on-primary-fixed": "#410002",
+                        "on-background": "#1b1c19",
+                        "on-tertiary-fixed": "#001a41",
+                        "surface": "#fbf9f4",
+                        "on-surface": "#1b1c19",
+                        "background": "#fbf9f4",
+                        "on-primary-fixed-variant": "#93000d",
+                        "tertiary": "#0057b9",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#30312e",
+                        "primary-fixed": "#ffdad6",
+                        "inverse-on-surface": "#f2f1ec",
+                        "surface-tint": "#c00015",
+                        "on-surface-variant": "#5d3f3c",
+                        "surface-container": "#f0eee9",
+                        "surface-bright": "#fbf9f4",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "tertiary-container": "#006fe8",
+                        "primary-container": "#e31b23",
+                        "on-secondary-container": "#656464",
+                        "on-tertiary-fixed-variant": "#004493",
+                        "on-tertiary-container": "#fbfaff",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#d8e2ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "display": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fbf9f4]/80 dark:bg-stone-950/80 backdrop-blur-xl shadow-[0_32px_64px_-12px_rgba(27,28,25,0.06)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto font-['Plus_Jakarta_Sans'] tracking-tight antialiased">
+<div class="text-2xl font-black italic text-[#b90014] dark:text-red-500">The Mateship</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:scale-[1.02] hover:text-[#b90014] transition-all duration-300" href="#">Buy a Car</a>
+<a class="text-[#b90014] dark:text-red-500 font-bold border-b-2 border-[#b90014] pb-1 hover:scale-[1.02] transition-all duration-300" href="#">Sell My Car</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:scale-[1.02] hover:text-[#b90014] transition-all duration-300" href="#">Valuations</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:scale-[1.02] hover:text-[#b90014] transition-all duration-300" href="#">Finance</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-bold hover:scale-[1.02] active:scale-[0.98] transition-all duration-300">Get My Valuation</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-20 px-4 min-h-screen">
+<div class="max-w-6xl mx-auto">
+<!-- Progress Stepper -->
+<div class="flex flex-col items-center mb-12">
+<div class="w-full max-w-md bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-1/3 transition-all duration-500"></div>
+</div>
+<div class="mt-4 flex gap-4 text-label-md font-bold text-secondary uppercase tracking-widest text-[10px]">
+<span class="text-primary">Step 1: Details</span>
+<span>Step 2: Condition</span>
+<span>Step 3: Valuation</span>
+</div>
+</div>
+<div class="grid lg:grid-cols-12 gap-12 items-start">
+<!-- Form Section -->
+<div class="lg:col-span-8">
+<header class="mb-10 text-center lg:text-left">
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface mb-4">
+                            Tell Us About <span class="text-primary italic">Your Car</span>
+</h1>
+<p class="text-body-lg text-secondary max-w-lg">
+                            It only takes a minute to get your mate's valuation. We use official data to give you the most accurate price.
+                        </p>
+</header>
+<div class="bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-[0_32px_64px_-12px_rgba(27,28,25,0.04)] border border-outline-variant/15">
+<form class="space-y-8">
+<div class="grid md:grid-cols-2 gap-6">
+<!-- Registration -->
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Registration Number</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg px-5 py-4 text-on-surface focus:ring-2 focus:ring-tertiary/20 transition-all placeholder:text-stone-400" placeholder="e.g. ABC-123" type="text"/>
+</div>
+<!-- State -->
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">State</label>
+<select class="w-full bg-surface-container-high border-none rounded-lg px-5 py-4 text-on-surface focus:ring-2 focus:ring-tertiary/20 transition-all">
+<option>NSW</option>
+<option>VIC</option>
+<option>QLD</option>
+<option>WA</option>
+<option>SA</option>
+<option>TAS</option>
+<option>ACT</option>
+<option>NT</option>
+</select>
+</div>
+</div>
+<!-- Kilometres -->
+<div class="space-y-2">
+<label class="block text-sm font-bold text-on-surface-variant ml-1">Current Kilometres</label>
+<div class="relative">
+<input class="w-full bg-surface-container-high border-none rounded-lg px-5 py-4 text-on-surface focus:ring-2 focus:ring-tertiary/20 transition-all placeholder:text-stone-400" placeholder="45,000" type="number"/>
+<span class="absolute right-5 top-1/2 -translate-y-1/2 text-stone-400 font-bold text-sm">KM</span>
+</div>
+</div>
+<div class="pt-4 flex flex-col md:flex-row items-center gap-6">
+<button class="w-full md:w-auto bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-4 rounded-full font-bold text-lg hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-primary/20" type="submit">
+                                    Next Step
+                                </button>
+<button class="text-primary font-bold hover:underline decoration-2 underline-offset-4 text-sm md:text-base" type="button">
+                                    Don't have your Rego? Enter details manually
+                                </button>
+</div>
+</form>
+</div>
+<!-- Manual Entry Hint (Initially Hidden logic) -->
+<div class="mt-8 grid grid-cols-3 gap-4 opacity-50 pointer-events-none">
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block text-[10px] font-bold text-secondary uppercase mb-1">Make</span>
+<div class="h-4 bg-stone-200 rounded w-2/3"></div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block text-[10px] font-bold text-secondary uppercase mb-1">Model</span>
+<div class="h-4 bg-stone-200 rounded w-1/2"></div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="block text-[10px] font-bold text-secondary uppercase mb-1">Year</span>
+<div class="h-4 bg-stone-200 rounded w-1/3"></div>
+</div>
+</div>
+</div>
+<!-- Sidebar / Companion Widget -->
+<aside class="lg:col-span-4 space-y-8">
+<!-- The Companion Widget -->
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/15 shadow-sm">
+<div class="flex items-center gap-4 mb-6">
+<div class="relative">
+<div class="w-16 h-16 rounded-full overflow-hidden bg-tertiary-fixed ring-4 ring-surface">
+<img class="w-full h-full object-cover" data-alt="A professional and friendly male automotive consultant with a warm smile, wearing a modern smart-casual shirt. He is positioned in a brightly lit, high-end automotive showroom with soft cream and warm wood textures in the background. The lighting is natural and inviting, creating a trustworthy and premium concierge atmosphere consistent with the warm neutral and red accent brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFvaiBf1Fer5e6Ehb-duXMDgXyXNtAuEm-ZDHXW0fQLrrg6XHtYSYu8KLD5CpqpUCtH4hJFmUknTAgCG_FAAXKlB0AqlecfDhAFYyp3J0S8GwndPPWeVA3gfeq2Keoq5KqE_CTu9O58vk5RdvhX3vmh4391KccQOQ_c9kjNm14AGt2LDamBxPKBxmwSjT5Dm88Xx7F1JkZcPQgTvAmFLGsK6xSAOtfPE42SnPXFxLpWACca3ytygCRRl0t_i18nYwUOsoAqvz9paM"/>
+</div>
+<div class="absolute bottom-0 right-0 w-4 h-4 bg-green-500 border-2 border-surface rounded-full"></div>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Meet Dave</h4>
+<p class="text-xs text-secondary">Your Car Mate is Online</p>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                            "Hi! I'm here to help you get the best price for your car. If you're stuck or have questions about your valuation, just give me a shout."
+                        </p>
+<button class="w-full bg-surface-container-highest text-on-surface py-3 rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:scale-[1.02] transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-lg">chat_bubble</span>
+                            Chat with a Mate
+                        </button>
+</div>
+<!-- Trust Stats (Editorial Style) -->
+<div class="relative overflow-hidden rounded-xl bg-primary-container p-8 text-on-primary-container">
+<div class="absolute top-0 right-0 opacity-10 translate-x-1/4 -translate-y-1/4">
+<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<h5 class="text-2xl font-black italic mb-2">5,000+</h5>
+<p class="text-sm font-medium opacity-90 leading-tight">Mates helped this month with their car sales.</p>
+</div>
+<!-- Contextual Tip -->
+<div class="p-2">
+<h6 class="text-xs font-bold text-primary uppercase tracking-widest mb-3">Mate's Tip</h6>
+<p class="text-sm text-secondary italic">
+                            "Having your service history ready will help us lock in a higher valuation in Step 2!"
+                        </p>
+</div>
+</aside>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 mt-20 bg-stone-100 dark:bg-stone-900">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 gap-6 max-w-7xl mx-auto font-['Manrope'] text-sm tracking-wide">
+<div class="text-lg font-bold text-stone-800 dark:text-stone-200">The Mateship</div>
+<div class="flex gap-8">
+<a class="text-stone-500 dark:text-stone-400 hover:text-[#b90014] transition-colors" href="#">Privacy Policy</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-[#b90014] transition-colors" href="#">Terms of Service</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-[#b90014] transition-colors" href="#">Contact a Mate</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-[#b90014] transition-colors" href="#">FAQs</a>
+</div>
+<p class="text-stone-500 dark:text-stone-400 text-center md:text-right">© 2024 The Mateship. Your trusted companion in every mile.</p>
+</div>
+</footer>
+</body></html>

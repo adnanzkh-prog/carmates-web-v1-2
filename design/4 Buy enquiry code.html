@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Enquire Now | CarMates</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-tint": "#c00015",
+                      "secondary-fixed": "#e4e2e1",
+                      "on-tertiary-container": "#fbfaff",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-container": "#006fe8",
+                      "on-secondary-fixed": "#1b1c1c",
+                      "on-background": "#1b1c19",
+                      "surface-variant": "#e4e2dd",
+                      "on-error-container": "#93000a",
+                      "outline": "#926e6b",
+                      "on-surface": "#1b1c19",
+                      "inverse-surface": "#30312e",
+                      "on-primary-container": "#fff9f8",
+                      "surface-container": "#f0eee9",
+                      "surface-container-low": "#f5f3ee",
+                      "primary-container": "#e31b23",
+                      "tertiary-fixed": "#d8e2ff",
+                      "on-primary": "#ffffff",
+                      "outline-variant": "#e7bdb8",
+                      "primary": "#b90014",
+                      "background": "#fbf9f4",
+                      "primary-fixed": "#ffdad6",
+                      "on-surface-variant": "#5d3f3c",
+                      "error-container": "#ffdad6",
+                      "on-secondary": "#ffffff",
+                      "surface": "#fbf9f4",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed": "#001a41",
+                      "surface-dim": "#dbdad5",
+                      "inverse-primary": "#ffb4ac",
+                      "tertiary-fixed-dim": "#adc7ff",
+                      "surface-bright": "#fbf9f4",
+                      "primary-fixed-dim": "#ffb4ac",
+                      "on-primary-fixed": "#410002",
+                      "on-error": "#ffffff",
+                      "tertiary": "#0057b9",
+                      "inverse-on-surface": "#f2f1ec",
+                      "error": "#ba1a1a",
+                      "on-secondary-container": "#656464",
+                      "on-primary-fixed-variant": "#93000d",
+                      "secondary": "#5f5e5e",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "surface-container-highest": "#e4e2dd",
+                      "on-tertiary-fixed-variant": "#004493",
+                      "on-secondary-fixed-variant": "#474747",
+                      "surface-container-high": "#eae8e3",
+                      "secondary-container": "#e4e2e1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "1rem",
+                      "xl": "1.5rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Plus Jakarta Sans"],
+                      "display": ["Plus Jakarta Sans"],
+                      "body": ["Manrope"],
+                      "label": ["Manrope"]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-primary-gradient {
+            background: linear-gradient(135deg, #b90014 0%, #e31b23 100%);
+        }
+        .soft-inset {
+            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="bg-[#fbf9f4] dark:bg-stone-950/90 backdrop-blur-md shadow-sm fixed top-0 z-50 w-full">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
+<a class="text-2xl font-black text-[#b90014] tracking-tighter font-display" href="#">CarMates</a>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#b90014] transition-colors duration-300 font-['Plus_Jakarta_Sans'] font-bold tracking-tight" href="#">Browse</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#b90014] transition-colors duration-300 font-['Plus_Jakarta_Sans'] font-bold tracking-tight" href="#">Sell</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#b90014] transition-colors duration-300 font-['Plus_Jakarta_Sans'] font-bold tracking-tight" href="#">Financing</a>
+<a class="text-[#b90014] border-b-2 border-[#b90014] pb-1 font-['Plus_Jakarta_Sans'] font-bold tracking-tight" href="#">Help</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center px-6 py-2.5 bg-primary-gradient text-on-primary rounded-full font-bold hover:scale-105 active:scale-95 transition-transform shadow-lg">
+                    Sign In
+                </button>
+<button class="material-symbols-outlined text-on-surface md:hidden" data-icon="menu">menu</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
+<!-- Focused Back Header -->
+<div class="mb-8 flex items-center gap-4">
+<button class="flex items-center justify-center w-12 h-12 rounded-full bg-surface-container-high hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<div>
+<h1 class="text-display-lg font-display font-extrabold tracking-tight text-on-surface">Enquire Now</h1>
+<p class="text-body-lg text-secondary">You're one step closer to your next journey.</p>
+</div>
+</div>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Column: Car Summary & Trust -->
+<div class="lg:col-span-5 space-y-8">
+<!-- Car Summary Card -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-[0_32px_64px_-15px_rgba(27,28,25,0.06)] group">
+<div class="relative h-64 overflow-hidden">
+<img alt="2022 Toyota RAV4" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A pristine 2022 Toyota RAV4 in a sophisticated metallic silver finish, parked on a scenic mountain road during the golden hour. The soft sunlight highlights the car's modern contours and rugged design. The surrounding atmosphere is warm and adventurous, reflecting a high-end editorial automotive photography style with natural textures and deep shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdoxlrfR24gH4g_pBJRdvI355iWbPDyh1ry-MZZVfSGjsYqJBxT1IafT1AJd1YWv0YtYhub_imQBh1rtHAw4ZyAirCB1BJmGi6LmcAi6hP6lQyI2B_7WiTpYsBJzhjpV4Dtqhw6rfPRtWjG8Xx2HtJSBNZCzCiBQmoWjlghu0dOHSKRh4U8SpQrKmbP8cLvaLW0qtlCVsCkcJVH_88OVHJ3W-r05Uu0QgkXP0XbghgRzQQfNY7UBN-tWx5YMvxSYOIO080HQUo3Bc"/>
+<div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-on-surface/60 to-transparent"></div>
+<div class="absolute bottom-4 left-6 text-white">
+<span class="text-xs font-bold uppercase tracking-widest bg-primary px-3 py-1 rounded-full mb-2 inline-block">Highly Rated</span>
+<h2 class="text-2xl font-display font-bold">2022 Toyota RAV4</h2>
+<p class="opacity-90 font-medium">Hybrid Cruiser • 12,400 km</p>
+</div>
+</div>
+<div class="p-8 space-y-6">
+<div class="flex justify-between items-center">
+<span class="text-3xl font-display font-extrabold text-on-surface">$42,990</span>
+<span class="text-tertiary font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
+                                Certified Mate
+                            </span>
+</div>
+<div class="grid grid-cols-2 gap-4 text-sm text-secondary">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+                                Full Service History
+                            </div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="shield_check">shield</span>
+                                12-Month Warranty
+                            </div>
+</div>
+</div>
+</div>
+<!-- Trust Section -->
+<div class="p-8 bg-tertiary-container/5 rounded-xl space-y-4">
+<h3 class="text-xl font-display font-bold text-on-surface">Why CarMates?</h3>
+<ul class="space-y-4">
+<li class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-tertiary" data-icon="volunteer_activism">volunteer_activism</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Human-First Approach</p>
+<p class="text-sm text-secondary">No automated bots. You'll chat with a real human who knows cars and people.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-tertiary" data-icon="no_accounts">no_accounts</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">No Pushy Sales</p>
+<p class="text-sm text-secondary">Our Mates are here to advise, not to pressure. We want the right car for your life.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<!-- Right Column: Inquiry Form & Companion Widget -->
+<div class="lg:col-span-7 space-y-12">
+<!-- The Companion Widget (Floating) -->
+<div class="flex flex-col md:flex-row items-center gap-6 p-6 bg-surface-container-lowest rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-outline-variant/10">
+<div class="relative">
+<div class="w-24 h-24 rounded-full overflow-hidden border-4 border-tertiary-fixed shadow-lg">
+<img alt="Your Mate, Sam" class="w-full h-full object-cover" data-alt="A friendly and professional man in his early 40s with a warm, approachable smile, wearing a casual navy blue polo shirt. He is photographed in a bright, modern office with soft natural lighting and blurred greenery in the background. The aesthetic is clean, trustworthy, and humanistic, conveying the persona of a helpful car expert or mate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPuvJF9MdXy4hdRkk-sO9qUL5uaK3XhTJVFQwnDRoRHgt9uMOAq6maaRbr9aW1HJPLbDrA_pXVV0UIblGuCaJrMT9ChJLOE-EZTcM6gIjhOAFqHkupVqECkmfZgkMsWSqb2GvsKsvzHpG4WxzKnKtzoKKyNGQLdugwiQrXWTo6mOY8jwdLpMtvBlbWYCeQLgTvvrgq8wKLL2KrJ4eC2SLA-TrBw1quC9y6yKUBsM84E0usZ_pFlymam99bPJYP5_bWWY7YaiAcuok"/>
+</div>
+<div class="absolute bottom-0 right-0 w-6 h-6 bg-green-500 border-4 border-surface-container-lowest rounded-full"></div>
+</div>
+<div class="text-center md:text-left">
+<h4 class="text-xl font-display font-bold text-on-surface">Sam is ready to chat!</h4>
+<p class="text-secondary max-w-sm">"Hey! I've personally inspected this RAV4. It's in fantastic condition. How can I help you today?"</p>
+</div>
+<div class="flex gap-3 ml-auto">
+<button class="w-12 h-12 rounded-full bg-[#25D366]/10 text-[#25D366] flex items-center justify-center hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</button>
+</div>
+</div>
+<!-- Inquiry Form -->
+<div class="bg-surface-container-lowest p-8 md:p-10 rounded-xl shadow-sm space-y-8">
+<div class="space-y-2">
+<h3 class="text-2xl font-display font-extrabold text-on-surface">Chat with a Mate</h3>
+<p class="text-secondary">Fill in your details and Sam will get back to you within 30 minutes.</p>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant ml-1">Your Name</label>
+<input class="w-full px-5 py-4 bg-surface-container-high rounded-lg border-none focus:ring-2 focus:ring-tertiary transition-all soft-inset" placeholder="e.g. Alex Smith" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant ml-1">Phone Number</label>
+<input class="w-full px-5 py-4 bg-surface-container-high rounded-lg border-none focus:ring-2 focus:ring-tertiary transition-all soft-inset" placeholder="+61 400 000 000" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant ml-1">Email Address</label>
+<input class="w-full px-5 py-4 bg-surface-container-high rounded-lg border-none focus:ring-2 focus:ring-tertiary transition-all soft-inset" placeholder="alex@example.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant ml-1">How can we help?</label>
+<textarea class="w-full px-5 py-4 bg-surface-container-high rounded-lg border-none focus:ring-2 focus:ring-tertiary transition-all soft-inset" placeholder="I'd love to know more about the service history and arrange a viewing..." rows="4"></textarea>
+</div>
+<div class="pt-4">
+<button class="w-full py-5 bg-primary-gradient text-on-primary rounded-xl font-bold text-lg shadow-[0_10px_30px_rgba(185,0,20,0.3)] hover:scale-[1.02] active:scale-95 transition-all" type="submit">
+                                Send Inquiry to Sam
+                            </button>
+</div>
+<p class="text-xs text-center text-secondary-container font-medium px-4">
+                            By clicking send, you agree to our Terms and understand your data is protected under our Privacy Policy.
+                        </p>
+</form>
+</div>
+<!-- Secondary Contact Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<button class="flex items-center justify-center gap-3 p-4 bg-surface-container-high rounded-xl hover:bg-surface-container-highest transition-colors font-bold text-on-surface">
+<span class="material-symbols-outlined text-green-600" data-icon="chat">chat</span>
+                        WhatsApp
+                    </button>
+<button class="flex items-center justify-center gap-3 p-4 bg-surface-container-high rounded-xl hover:bg-surface-container-highest transition-colors font-bold text-on-surface">
+<span class="material-symbols-outlined text-tertiary" data-icon="call">call</span>
+                        Call Us
+                    </button>
+<button class="flex items-center justify-center gap-3 p-4 bg-surface-container-high rounded-xl hover:bg-surface-container-highest transition-colors font-bold text-on-surface">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+                        Email Info
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-900 w-full py-12 mt-auto">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="space-y-4">
+<span class="text-xl font-bold text-stone-900 dark:text-stone-100 font-display">CarMates</span>
+<p class="font-['Manrope'] text-sm text-stone-600 dark:text-stone-400">© 2024 CarMates. Built for Mateship.</p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4 md:justify-end">
+<a class="text-stone-500 hover:text-stone-900 underline decoration-[#b90014] decoration-2 underline-offset-4 font-['Manrope'] text-sm transition-opacity opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-stone-500 hover:text-stone-900 underline decoration-[#b90014] decoration-2 underline-offset-4 font-['Manrope'] text-sm transition-opacity opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-stone-500 hover:text-stone-900 underline decoration-[#b90014] decoration-2 underline-offset-4 font-['Manrope'] text-sm transition-opacity opacity-80 hover:opacity-100" href="#">Contact Us</a>
+<a class="text-stone-500 hover:text-stone-900 underline decoration-[#b90014] decoration-2 underline-offset-4 font-['Manrope'] text-sm transition-opacity opacity-80 hover:opacity-100" href="#">Our Story</a>
+</div>
+</div>
+</footer>
+</body></html>

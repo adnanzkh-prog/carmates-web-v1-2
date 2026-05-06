@@ -7,122 +7,106 @@ export default function HomeHero() {
   const router = useRouter();
   const [filters, setFilters] = useState({
     make: "",
-    model: "",
-    minPrice: "",
     maxPrice: "",
-    year: "",
   });
 
   const handleSearch = () => {
     const params = new URLSearchParams();
-    Object.entries(filters).forEach(([k, v]) => v && params.append(k, v));
+    if (filters.make) params.append("make", filters.make);
+    if (filters.maxPrice) params.append("maxPrice", filters.maxPrice);
     router.push(`/listings?${params.toString()}`);
   };
 
   return (
-    <section className="relative overflow-hidden bg-slate-950 text-white py-24 px-4">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.25),_transparent_40%),radial-gradient(circle_at_bottom_right,_rgba(59,130,246,0.2),_transparent_25%)]" />
-      <div className="relative max-w-7xl mx-auto">
-        <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] items-center">
-          <div>
-            <span className="inline-flex rounded-full bg-blue-500/20 px-4 py-2 text-sm font-semibold text-blue-200 mb-4">
-              Trusted by Australian Mates since 2024
-            </span>
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-              Find your next <span className="text-blue-400">mate</span> on wheels.
-            </h1>
-            <p className="mt-6 max-w-xl text-lg text-slate-300">
-              Browse hand-picked vehicles with a 150-point inspection, live human support, and transparent pricing you can trust.
-            </p>
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
-              <button onClick={handleSearch} className="rounded-full bg-blue-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-blue-400">
-                Search available cars
-              </button>
-              <button
-                onClick={() => router.push('/listings')}
-                className="rounded-full border border-slate-700 bg-slate-900 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-blue-400"
-              >
-                Browse all listings
-              </button>
-            </div>
-            <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-slate-300">
-              <div className="rounded-3xl border border-slate-800 bg-slate-900 p-5">
-                <p className="font-semibold text-white">150-point safety check</p>
-                <p className="mt-2 text-slate-400">Every vehicle inspected by a real mate.</p>
-              </div>
-              <div className="rounded-3xl border border-slate-800 bg-slate-900 p-5">
-                <p className="font-semibold text-white">7-day money back</p>
-                <p className="mt-2 text-slate-400">Drive with peace of mind.</p>
-              </div>
-              <div className="rounded-3xl border border-slate-800 bg-slate-900 p-5">
-                <p className="font-semibold text-white">Fast local support</p>
-                <p className="mt-2 text-slate-400">Chat with a mate, not a bot.</p>
-              </div>
-            </div>
+    <section className="relative overflow-hidden bg-white">
+      {/* Background image */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white via-white to-transparent z-10" />
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: 'url("https://images.unsplash.com/photo-1552820728-8ac41f1ce891?auto=format&fit=crop&w=1400&q=80")',
+        }}
+      />
+
+      <div className="relative z-20 max-w-7xl mx-auto px-4 md:px-6 py-20 md:py-32 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="text-black space-y-6">
+          {/* Guarantee badge */}
+          <div className="inline-flex rounded-full bg-pink-100 px-4 py-2 text-sm font-semibold text-red-700">
+            REST/SHIP GUARANTEE
           </div>
 
-          <div className="rounded-[2rem] border border-white/10 bg-slate-900 p-6 shadow-2xl">
-            <div className="space-y-4">
-              <div className="rounded-3xl bg-slate-950 p-6">
-                <p className="text-sm uppercase tracking-[0.3em] text-slate-500">Search your next car</p>
-                <div className="mt-4 space-y-3">
-                  <input
-                    type="text"
-                    placeholder="Search make or model"
-                    className="w-full rounded-2xl border border-slate-800 bg-slate-900 px-4 py-3 text-slate-100 focus:border-blue-400 focus:outline-none"
-                    value={filters.model}
-                    onChange={(e) => setFilters({ ...filters, model: e.target.value })}
-                  />
-                  <div className="grid gap-3 sm:grid-cols-2">
-                    <input
-                      type="number"
-                      placeholder="Min price"
-                      className="rounded-2xl border border-slate-800 bg-slate-900 px-4 py-3 text-slate-100 focus:border-blue-400 focus:outline-none"
-                      value={filters.minPrice}
-                      onChange={(e) => setFilters({ ...filters, minPrice: e.target.value })}
-                    />
-                    <input
-                      type="number"
-                      placeholder="Max price"
-                      className="rounded-2xl border border-slate-800 bg-slate-900 px-4 py-3 text-slate-100 focus:border-blue-400 focus:outline-none"
-                      value={filters.maxPrice}
-                      onChange={(e) => setFilters({ ...filters, maxPrice: e.target.value })}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-3">
+          {/* Main heading */}
+          <h1 className="text-5xl md:text-6xl font-black leading-tight">
+            Your Trusted <span className="text-red-700">Mate</span>
+            <br />
+            for Every Mile.
+          </h1>
+
+          {/* Description */}
+          <p className="text-lg text-gray-700 max-w-lg">
+            Real people, reliable cars, and a handshake you can trust. Welcome to the CarMates family where we treat every deal like it's a friend.
+          </p>
+
+          {/* Search form */}
+          <div className="bg-white rounded-2xl shadow-lg p-6 space-y-4 mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <label className="text-xs font-semibold text-gray-600 uppercase">Make & Model</label>
                 <select
-                  className="rounded-2xl border border-slate-800 bg-slate-900 px-4 py-3 text-slate-100 focus:border-blue-400 focus:outline-none"
                   value={filters.make}
                   onChange={(e) => setFilters({ ...filters, make: e.target.value })}
+                  className="w-full mt-2 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-700"
                 >
                   <option value="">Any Make</option>
                   <option value="Toyota">Toyota</option>
                   <option value="Mazda">Mazda</option>
                   <option value="Kia">Kia</option>
                   <option value="Subaru">Subaru</option>
-                </select>
-                <select
-                  className="rounded-2xl border border-slate-800 bg-slate-900 px-4 py-3 text-slate-100 focus:border-blue-400 focus:outline-none"
-                  value={filters.year}
-                  onChange={(e) => setFilters({ ...filters, year: e.target.value })}
-                >
-                  <option value="">Any Year</option>
-                  {[2024, 2023, 2022, 2021, 2020].map((year) => (
-                    <option key={year} value={year}>
-                      {year}
-                    </option>
-                  ))}
+                  <option value="Hyundai">Hyundai</option>
                 </select>
               </div>
-              <button
-                onClick={handleSearch}
-                className="w-full rounded-full bg-blue-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-blue-400"
-              >
-                Search now
-              </button>
+              <div>
+                <label className="text-xs font-semibold text-gray-600 uppercase">Price</label>
+                <select
+                  value={filters.maxPrice}
+                  onChange={(e) => setFilters({ ...filters, maxPrice: e.target.value })}
+                  className="w-full mt-2 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-700"
+                >
+                  <option value="">Any Price</option>
+                  <option value="25000">Under $25k</option>
+                  <option value="50000">Under $50k</option>
+                  <option value="75000">Under $75k</option>
+                  <option value="100000">Under $100k</option>
+                </select>
+              </div>
+              <div className="flex items-end">
+                <button
+                  onClick={handleSearch}
+                  className="w-full bg-red-700 hover:bg-red-800 text-white font-semibold py-3 px-6 rounded-lg transition"
+                >
+                  🔍 Search
+                </button>
+              </div>
             </div>
+          </div>
+        </div>
+
+        {/* Right side - Chat assistant widget */}
+        <div className="flex justify-end">
+          <div className="bg-white rounded-2xl shadow-xl p-6 max-w-xs border border-gray-200">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600" />
+              <div>
+                <p className="font-semibold text-sm text-gray-900">Need Help?</p>
+                <p className="text-xs text-gray-500">Chat with a Mate</p>
+              </div>
+            </div>
+            <p className="text-sm text-gray-700">
+              "I'm here to help you find your perfect car. Ask me anything!"
+            </p>
+            <button className="w-full mt-4 text-red-700 font-semibold text-sm hover:text-red-800">
+              Start a conversation →
+            </button>
           </div>
         </div>
       </div>

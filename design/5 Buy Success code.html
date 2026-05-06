@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#c00015",
+                        "secondary-fixed": "#e4e2e1",
+                        "on-tertiary-container": "#fbfaff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#006fe8",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-background": "#1b1c19",
+                        "surface-variant": "#e4e2dd",
+                        "on-error-container": "#93000a",
+                        "outline": "#926e6b",
+                        "on-surface": "#1b1c19",
+                        "inverse-surface": "#30312e",
+                        "on-primary-container": "#fff9f8",
+                        "surface-container": "#f0eee9",
+                        "surface-container-low": "#f5f3ee",
+                        "primary-container": "#e31b23",
+                        "tertiary-fixed": "#d8e2ff",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#e7bdb8",
+                        "primary": "#b90014",
+                        "background": "#fbf9f4",
+                        "primary-fixed": "#ffdad6",
+                        "on-surface-variant": "#5d3f3c",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "surface": "#fbf9f4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#001a41",
+                        "surface-dim": "#dbdad5",
+                        "inverse-primary": "#ffb4ac",
+                        "tertiary-fixed-dim": "#adc7ff",
+                        "surface-bright": "#fbf9f4",
+                        "primary-fixed-dim": "#ffb4ac",
+                        "on-primary-fixed": "#410002",
+                        "on-error": "#ffffff",
+                        "tertiary": "#0057b9",
+                        "inverse-on-surface": "#f2f1ec",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#656464",
+                        "on-primary-fixed-variant": "#93000d",
+                        "secondary": "#5f5e5e",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-container-highest": "#e4e2dd",
+                        "on-tertiary-fixed-variant": "#004493",
+                        "on-secondary-fixed-variant": "#474747",
+                        "surface-container-high": "#eae8e3",
+                        "secondary-container": "#e4e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans", "sans-serif"],
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #fbf9f4; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .success-blob {
+            background: radial-gradient(circle at 50% 50%, rgba(185, 0, 20, 0.05) 0%, rgba(251, 249, 244, 0) 70%);
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Success Content Canvas -->
+<main class="min-h-screen relative overflow-hidden flex flex-col items-center pt-12 pb-24 px-6">
+<!-- Background Ambient Element -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] success-blob -z-10"></div>
+<!-- Success Header Section -->
+<section class="max-w-4xl w-full text-center space-y-6 mb-16">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full mb-4">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label font-bold text-sm tracking-widest uppercase">Inquiry Received</span>
+</div>
+<h1 class="font-display text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface leading-[1.1]">
+                You're one step closer to <br/>
+<span class="text-primary italic">your new mate!</span>
+</h1>
+<p class="font-body text-xl text-secondary max-w-2xl mx-auto leading-relaxed">
+                No robots here, mate. We're getting things sorted and we'll be in touch before you've even finished your next cuppa.
+            </p>
+</section>
+<!-- Main Content Grid -->
+<div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Car Inquiry Card -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl shadow-[0_32px_64px_-15px_rgba(27,28,25,0.06)] overflow-hidden">
+<div class="h-80 w-full relative">
+<img class="w-full h-full object-cover" data-alt="A premium silver SUV parked on a coastal Australian road during the golden hour. The setting sun casts a warm, orange glow over the vehicle, highlighting its sleek metallic curves. The background features rolling green cliffs and a hint of the blue Pacific Ocean under a clear, soft sky. The overall mood is aspirational, high-end, and serene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX6Cox8q21WeHXMkjLo15QdEozrEGzCZiJc3y13QnQenkQLwYbH3zFopQL7BvCap2Lp6NSb6a0Ws-rssQ9wo1enpGp0Z-wfrJZqxXt-hInQ27EGCdFBTQ9wKMS7KkqvwapOx5iw0UQHtzOIdYQOQk1JvbQ6yxByfgyOzyzil0fXM3LindysDGjEtQ_-Ov8rLnKLWRqGY-rY-uerky1LYvGgP8JZ1PuRdCbH7QiFQUUYw8SjrkMdx-0mpchNlNtMveJQi1G2NcQ04M"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-6 left-8 text-white">
+<p class="font-label text-xs uppercase tracking-widest opacity-80 mb-1">Your Inquiry</p>
+<h3 class="font-display text-3xl font-bold">2023 Grand Tourer XL</h3>
+</div>
+</div>
+<div class="p-8 space-y-6">
+<div class="flex items-center gap-4 py-4 px-6 bg-surface-container-low rounded-lg">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<p class="font-label text-xs uppercase tracking-widest text-secondary font-bold">Expect a ring</p>
+<p class="text-lg font-bold text-on-surface">Within 30 minutes</p>
+</div>
+</div>
+<p class="text-secondary leading-relaxed">
+                        We've received your interest in this beauty. Our team is currently checking the final detail logs and verifying its availability to give you the most accurate update.
+                    </p>
+</div>
+</div>
+<!-- Companion Widget (The Human Element) -->
+<div class="lg:col-span-5 space-y-8">
+<div class="bg-surface-container-high p-8 rounded-xl relative overflow-hidden group">
+<!-- Trust Accent -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-tertiary/5 rounded-full -mr-16 -mt-16 group-hover:scale-110 transition-transform duration-700"></div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="relative mb-6">
+<div class="w-24 h-24 rounded-full border-4 border-surface-container-lowest overflow-hidden shadow-xl">
+<img class="w-full h-full object-cover" data-alt="A friendly and professional automotive consultant with a warm smile, wearing a casual navy blue polo shirt. He is standing in a brightly lit, modern showroom with a soft-focus background of high-end vehicles. The lighting is natural and inviting, emphasizing a humanistic, concierge-style service. The color palette is clean with warm neutral tones and a hint of professional blue." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVmOKbG_UVx8TEoEmDP5mV3LWBBd_6hPP2iYxbzN3fShuAub6H6HIKVhLx-H-9ZNT7AWiP2IedwGqCHqb6ORczmWbU7ol8Xy2tVGbpvTxRy-CeThdnJ7CL-U5ujtkAKLpLEnghLgWNNxbPJGWjk7Zr-DRtOFGWgjMjIEVZ6qeYtNUCkdDzFFyHwFHVltekjhRVUI8SlgwCIkErIeX6RhQjcGTTI4PRld3Zy1MSi8wRpR8lvhbRh4eAkgh-pUTqmuGIoyK9lOM_jq8"/>
+</div>
+<div class="absolute -bottom-2 -right-2 bg-tertiary text-white p-2 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<h4 class="font-display text-2xl font-bold text-on-surface mb-1">Meet Dave, your Mate</h4>
+<p class="font-label text-sm text-secondary font-semibold uppercase tracking-widest mb-4">Senior Sales Concierge</p>
+<p class="text-on-surface-variant leading-relaxed italic mb-6">
+                            "G'day! I've just picked up your inquiry. I'm going to grab the keys and do a quick walk-around for you. Talk soon!"
+                        </p>
+<div class="w-full h-[1px] bg-outline-variant/20 mb-6"></div>
+<div class="flex gap-4 w-full">
+<div class="flex-1 py-3 bg-surface-container-lowest rounded-lg">
+<p class="text-[10px] uppercase tracking-tighter text-secondary font-bold">Response Rate</p>
+<p class="font-bold text-tertiary">Lightning Fast</p>
+</div>
+<div class="flex-1 py-3 bg-surface-container-lowest rounded-lg">
+<p class="text-[10px] uppercase tracking-tighter text-secondary font-bold">Mateship Score</p>
+<p class="font-bold text-primary">5.0 / 5.0</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Links -->
+<div class="flex flex-col gap-4">
+<a class="w-full flex items-center justify-center gap-3 py-5 bg-gradient-to-r from-primary to-primary-container text-white rounded-full font-bold text-lg shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-300" href="#">
+<span>Browse More Cars</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="w-full flex items-center justify-center gap-3 py-5 bg-surface-container-highest text-on-surface rounded-full font-bold text-lg hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span>View Saved Cars</span>
+</a>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="w-full py-12 mt-auto bg-stone-100 dark:bg-stone-900 border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="space-y-4">
+<div class="text-xl font-bold text-stone-900 dark:text-stone-100 flex items-center gap-2">
+<span class="text-primary material-symbols-outlined">directions_car</span>
+                    CarMates
+                </div>
+<p class="font-['Manrope'] text-sm text-stone-600 dark:text-stone-400">
+                    © 2024 CarMates. Built for Mateship. Every car has a story, every buyer deserves a mate.
+                </p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4 md:justify-end">
+<a class="text-stone-500 hover:text-stone-900 font-['Manrope'] text-sm transition-opacity opacity-80 hover:opacity-100 underline decoration-[#b90014] decoration-2 underline-offset-4" href="#">Privacy Policy</a>
+<a class="text-stone-500 hover:text-stone-900 font-['Manrope'] text-sm transition-opacity opacity-80 hover:opacity-100 underline decoration-[#b90014] decoration-2 underline-offset-4" href="#">Terms of Service</a>
+<a class="text-stone-500 hover:text-stone-900 font-['Manrope'] text-sm transition-opacity opacity-80 hover:opacity-100 underline decoration-[#b90014] decoration-2 underline-offset-4" href="#">Contact Us</a>
+<a class="text-stone-500 hover:text-stone-900 font-['Manrope'] text-sm transition-opacity opacity-80 hover:opacity-100 underline decoration-[#b90014] decoration-2 underline-offset-4" href="#">Our Story</a>
+</div>
+</div>
+</footer>
+</body></html>

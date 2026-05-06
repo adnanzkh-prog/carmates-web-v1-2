@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - CarMates Admin Lounge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f2f1ec",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#ffb4ac",
+                        "tertiary-fixed": "#d8e2ff",
+                        "tertiary-container": "#006fe8",
+                        "surface-dim": "#dbdad5",
+                        "on-error-container": "#93000a",
+                        "background": "#fbf9f4",
+                        "on-tertiary-fixed": "#001a41",
+                        "surface-container-high": "#eae8e3",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#93000d",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "outline-variant": "#e7bdb8",
+                        "on-surface": "#1b1c19",
+                        "primary": "#b90014",
+                        "on-primary-container": "#fff9f8",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e4e2dd",
+                        "outline": "#926e6b",
+                        "on-tertiary-container": "#fbfaff",
+                        "surface-container": "#f0eee9",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#c00015",
+                        "secondary-container": "#e4e2e1",
+                        "primary-fixed": "#ffdad6",
+                        "on-secondary-fixed-variant": "#474747",
+                        "tertiary": "#0057b9",
+                        "primary-fixed-dim": "#ffb4ac",
+                        "surface-bright": "#fbf9f4",
+                        "tertiary-fixed-dim": "#adc7ff",
+                        "surface": "#fbf9f4",
+                        "surface-container-low": "#f5f3ee",
+                        "secondary-fixed": "#e4e2e1",
+                        "on-surface-variant": "#5d3f3c",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#410002",
+                        "on-background": "#1b1c19",
+                        "secondary": "#5f5e5e",
+                        "on-tertiary-fixed-variant": "#004493",
+                        "on-error": "#ffffff",
+                        "primary-container": "#e31b23",
+                        "surface-variant": "#e4e2dd",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#656464",
+                        "inverse-surface": "#30312e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "display": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- SideNavBar (Authority: JSON) -->
+<aside class="flex flex-col fixed left-0 top-0 h-full z-40 bg-[#fbf9f4] dark:bg-stone-950 font-['Plus_Jakarta_Sans'] font-bold tracking-tight h-screen w-72 rounded-r-[1.5rem] border-none shadow-[32px_0_64px_-20px_rgba(27,28,25,0.06)]">
+<div class="p-8">
+<div class="flex items-center gap-3 mb-12">
+<img alt="CarMates Logo" class="h-10 w-auto" data-alt="The official CarMates logo featuring a sleek, modern automotive emblem integrated with professional typography. The logo is rendered in high-definition against a clean, warm-toned background that reflects the premium 'Humanistic Concierge' brand identity. Strong red accents highlight the brand's energy, while the surrounding whitespace maintains an editorial and uncluttered feel. The lighting is soft and even, emphasizing professional reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtHsP6sbeSxZSfHn6dayTPBjsi7mGc8wW3CSWoG4mkjF0-BnBJMvjyA8Dgl-4WZ6_0XAnbpZ3fmkYWUyQiCxowtm_gTqUeFnu3BxBeF3ZyNV64i2HkivCxyxxh0hN4f8TgdgfHcpPpXPjTP1bMPEbiUkAjdk2XssJWhPGJHQNvPSMcSEG5RMNF2OIIN1f9x3QDCH-xuyOVoN9hxs_S6N0_JnDbAfiMKvYvcDcMpvEftjCGX7ajVpG6QMDmXrqQENKJYu9z5uRI6yo"/>
+</div>
+<nav class="space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-300 ease-in-out text-stone-500 dark:text-stone-400 hover:text-[#b90014] hover:bg-stone-100 dark:hover:bg-stone-900 scale-102 active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-300 ease-in-out text-stone-500 dark:text-stone-400 hover:text-[#b90014] hover:bg-stone-100 dark:hover:bg-stone-900 scale-102 active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="directions_car">directions_car</span>
+<span>Listings</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-300 ease-in-out text-stone-500 dark:text-stone-400 hover:text-[#b90014] hover:bg-stone-100 dark:hover:bg-stone-900 scale-102 active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="dynamic_feed">dynamic_feed</span>
+<span>Bulk Actions</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-300 ease-in-out text-[#b90014] dark:text-red-400 font-bold border-r-4 border-[#b90014] bg-stone-100/50 dark:bg-stone-800/50 scale-102 active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+<span>Support Hub</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-300 ease-in-out text-stone-500 dark:text-stone-400 hover:text-[#b90014] hover:bg-stone-100 dark:hover:bg-stone-900 scale-102 active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="settings_accessibility">settings_accessibility</span>
+<span>Admin Settings</span>
+</a>
+</nav>
+</div>
+<div class="mt-auto p-8 border-t border-stone-100 dark:border-stone-800">
+<div class="flex items-center gap-3 mb-6 p-2">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center overflow-hidden">
+<img alt="Senior Admin Mate" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvEJaqqqnaTpPA5GnXVYaKwy3aLluj1EgxTCR2Un1ITcSS3wbXji7MJYkdC-dBTM_AcmpsBL8QiEVSRhcoFvh1ox2g2uK595v95XujhLuo16nKcyTE4_q2_Xr-PcN7KHHkpReIDNvcoZ3yOv_TGQzGepXB9MKdlnn8TSyCBbbUYPcC78sVPpR8iLTUjQAFrgE7fY3WoVd_Xp3mrxYuMjnYowg65LH949mWJyb4ZG-_28G548OXGYFvpsk8X9KS9Aqn4E8O8B44U_Q"/>
+</div>
+<div>
+<p class="text-sm font-black text-stone-900 dark:text-stone-100 leading-tight">Senior Admin Mate</p>
+<p class="text-xs text-stone-500 font-normal">The Humanistic Concierge</p>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-4 px-4 py-2 rounded-lg text-stone-500 hover:text-[#b90014] text-sm" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="help_outline">help_outline</span>
+<span>Help Center</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-2 rounded-lg text-stone-500 hover:text-[#b90014] text-sm" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="logout">logout</span>
+<span>Logout</span>
+</a>
+</nav>
+</div>
+</aside>
+<!-- TopNavBar (Authority: JSON) -->
+<header class="flex items-center justify-between px-12 ml-72 w-[calc(100%-18rem)] w-full h-20 sticky top-0 z-30 bg-[#fbf9f4]/80 dark:bg-stone-950/80 backdrop-blur-xl font-['Plus_Jakarta_Sans'] font-semibold">
+<div class="flex items-center gap-8">
+<h1 class="text-xl font-bold text-stone-900 dark:text-stone-100">Admin Lounge</h1>
+<div class="relative w-96">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-stone-400">search</span>
+<input class="w-full bg-surface-container-high border-none rounded-full py-2 pl-12 pr-4 text-sm focus:ring-2 focus:ring-tertiary/20" placeholder="Search for Mates or Listings..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="relative hover:scale-[1.02] duration-200 text-stone-600 dark:text-stone-400">
+<span class="material-symbols-outlined" data-icon="notifications_active">notifications_active</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+<button class="hover:scale-[1.02] duration-200 text-stone-600 dark:text-stone-400">
+<span class="material-symbols-outlined" data-icon="chat_bubble_outline">chat_bubble_outline</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center border-2 border-surface overflow-hidden hover:scale-[1.02] duration-200 cursor-pointer">
+<img alt="User profile photo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkiwwMLMSQN6TViBw1Xw9cVx-mEOhCCp7DfEMTaikX9dSiDUhvQKiLUDD19iQVgz57keKbVJvOuJ4L_t3Xo0JxjfUsBgaAK1LOKUgBi9Dl2xg199ncy3R58Lu1ob5kBpraqNao8b4LXig5Y4811BJVMnkqVm5vNDYZkFbN_DBo6Cq_-9T20jztpIfVIJy06Fx2JpOdmWdQSRoiOf973dXp33c47Wh8c2DfYcbQqasDWc2B6VtHEBEl48cwu62uCUq2Dl6owW31biI"/>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="ml-72 p-12 min-h-screen">
+<!-- Hero Section -->
+<section class="mb-20">
+<div class="max-w-4xl">
+<span class="inline-block py-1 px-4 rounded-full bg-primary/10 text-primary font-bold text-xs uppercase tracking-widest mb-6">Support Hub</span>
+<h2 class="text-6xl font-extrabold tracking-tighter text-on-surface mb-6 leading-tight">We're here to help, <span class="text-primary italic">mate</span>.</h2>
+<p class="text-xl text-on-surface-variant font-body max-w-2xl leading-relaxed">Whether you're troubleshooting a listing or just need a hand navigating the lounge, our team is standing by with local Aussie knowledge.</p>
+</div>
+</section>
+<!-- Bento Grid Contact Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Enquiry Form (The Professional Tool) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-2xl p-10 shadow-[32px_32px_64px_-20px_rgba(27,28,25,0.04)]">
+<h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+                    Send an Enquiry
+                </h3>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant px-1">Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-tertiary transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant px-1">Email</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-tertiary transition-all" placeholder="john@example.com.au" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant px-1">Subject</label>
+<select class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-tertiary transition-all appearance-none">
+<option>General Support</option>
+<option>Technical Issue</option>
+<option>Listing Verification</option>
+<option>Partnership Enquiry</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant px-1">Message</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-tertiary transition-all" placeholder="G'day! Tell us how we can assist..." rows="5"></textarea>
+</div>
+<button class="w-full py-4 px-8 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-full font-bold text-lg hover:scale-[1.02] transition-transform active:scale-98 shadow-lg shadow-primary/20">
+                        Send Message
+                    </button>
+</form>
+</div>
+<!-- Side Cards Column -->
+<div class="lg:col-span-5 space-y-8">
+<!-- Instant Contact Cards -->
+<div class="grid grid-cols-1 gap-6">
+<a class="group bg-surface-container rounded-2xl p-8 flex items-center justify-between hover:bg-surface-container-highest transition-all duration-300" href="tel:1800CARMATE">
+<div class="flex items-center gap-6">
+<div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="call">call</span>
+</div>
+<div>
+<h4 class="font-bold text-xl">Call Mate</h4>
+<p class="text-on-surface-variant text-sm">Mon-Fri, 9am - 5pm AEST</p>
+<p class="text-primary font-bold mt-1">1800 CAR MATE</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-stone-300 group-hover:text-primary transition-colors">chevron_right</span>
+</a>
+<a class="group bg-surface-container rounded-2xl p-8 flex items-center justify-between hover:bg-surface-container-highest transition-all duration-300" href="#">
+<div class="flex items-center gap-6">
+<div class="w-14 h-14 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="chat">chat</span>
+</div>
+<div>
+<h4 class="font-bold text-xl">WhatsApp Mate</h4>
+<p class="text-on-surface-variant text-sm">Fast response for quick questions</p>
+<p class="text-tertiary font-bold mt-1">Chat Live Now</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-stone-300 group-hover:text-tertiary transition-colors">chevron_right</span>
+</a>
+</div>
+<!-- Companion Widget (The Human Element) -->
+<div class="bg-surface-container-lowest rounded-2xl p-8 border border-outline-variant/15 flex gap-6 items-start">
+<div class="relative flex-shrink-0">
+<div class="w-20 h-20 rounded-full overflow-hidden bg-tertiary-fixed border-4 border-surface shadow-lg">
+<img alt="Support Specialist" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNNpf0J0EhNnsQixEGsdxsO_gHkrNHgegM3y4QO42qGHNCc6gxlu5cbN5dkNXXrYadCSMneRw9DzTFfJCh9tF7JCpOMbCgxEVcLMOHBkU9KTwR7t68al56wYoTbQYaZwyCeyyEeoE9kG3nVfBqLVq3d2Hvmit6jt79NdwasOdhzU4gZxvXRfCjhUcfAzw3tdd_9QvIGwjsBjAS9A6uqGP2vRN7F4rb5Bq6FeI00khYYoX-DnUAb4Uy1w9TzgURvHU73ZgT4umk0Us"/>
+</div>
+<span class="absolute bottom-1 right-1 w-4 h-4 bg-emerald-500 border-2 border-white rounded-full"></span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-primary mb-1">Your Personal Mate</p>
+<h4 class="text-xl font-bold mb-2">Dave is Online</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">"G'day! I've helped over 1,200 mates get their cars listed this month. I'm ready to help you too."</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Office Locations Section -->
+<section class="mt-24">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h3 class="text-3xl font-extrabold tracking-tight mb-2">Our Local HQs</h3>
+<p class="text-on-surface-variant">Drop in for a coffee and a chat about your fleet.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- VIC Office -->
+<div class="group">
+<div class="relative h-64 rounded-2xl overflow-hidden mb-6">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A modern, glass-fronted office building in Melbourne's tech district during a soft, golden hour sunset. The architecture is sleek and contemporary with warm interior lighting spilling out onto the street. The surrounding environment features manicured greenery and a sense of bustling urban energy, all rendered in a high-key, warm light-mode aesthetic that aligns with the CarMates brand colors of cream and vibrant red." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCVdSee0s9Xrv6jqKJGP4wumhSUWOnASdwOkneZ3oEtfvX7ZzjA0rkZctU8bI_cyMfA1iqx9_mAVy96xJfi6gCn77dIlq8tIPymC6ESf74Y51sk4VenxeilS0DRLRTsBwwoxC8R1Tw5NaEQY7vhoaBmrTiWT3DgfN29TPlAan4rfCBxsQsbwXytx6MpPAow6xfl5tKGWw7S21U2L7Y9nOMKpRPy8kObbOlPjlsG6ZzyX5YHqCtsL3iLZhP2n0TPLj91jYV2B1WY7Y"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<span class="bg-primary px-3 py-1 rounded text-xs font-bold uppercase tracking-widest">VIC Headquarters</span>
+<h4 class="text-2xl font-bold mt-2">Melbourne Lounge</h4>
+</div>
+</div>
+<div class="flex gap-4 items-start px-2">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="location_on">location_on</span>
+<div>
+<p class="text-lg font-bold">123 Collins Street</p>
+<p class="text-on-surface-variant">Melbourne, VIC 3000</p>
+</div>
+</div>
+</div>
+<!-- QLD Office -->
+<div class="group">
+<div class="relative h-64 rounded-2xl overflow-hidden mb-6">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A sun-drenched, professional office space in Brisbane with large windows overlooking a tropical garden. The atmosphere is vibrant and welcoming, filled with natural light that highlights the warm cream-toned surfaces and rich red furniture accents. The visual style is premium and editorial, capturing the essence of 'The Reliable Companion' brand identity in a modern, professional setting during a bright Australian day." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBytk1FsAR3Z__m5iaDXWlG83h0xj4e9toDQqxXLiJAjn77s1YYtbvjiPw-woRO3u9eMTKosUsQRFG_CH8DbwWZFaKldkVAOm52ZAERDoe06fmWJTBXY-R0sp6Viy9VgoaRvxxNmMK6suRm33LFxhPatzU9Ii3dH1sF-PeyBTJsXGZu7Z6q8MxaO616poOO_84hVaqJ7yrt000ym4GG3YijGDKO-WWg3hTfb8jRcMhPxffJLcAbdHmWxRhC3qj4_3khNE1l-u_Oo4w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<span class="bg-primary px-3 py-1 rounded text-xs font-bold uppercase tracking-widest">QLD Headquarters</span>
+<h4 class="text-2xl font-bold mt-2">Brisbane Hub</h4>
+</div>
+</div>
+<div class="flex gap-4 items-start px-2">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="location_on">location_on</span>
+<div>
+<p class="text-lg font-bold">45 Eagle Street</p>
+<p class="text-on-surface-variant">Brisbane, QLD 4000</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Authority: JSON) -->
+<footer class="flex flex-col md:flex-row justify-between items-center px-12 ml-72 w-[calc(100%-18rem)] py-8 mt-auto bg-stone-100 dark:bg-stone-900 border-t border-stone-200/50 dark:border-stone-800/50 font-['Manrope'] text-xs uppercase tracking-widest">
+<div class="text-stone-400 dark:text-stone-600 mb-4 md:mb-0">
+            © 2024 CarMates.com.au — Mateship built on trust.
+        </div>
+<div class="flex gap-8">
+<a class="text-stone-400 dark:text-stone-600 hover:text-[#b90014] transition-colors" href="#">Internal Wiki</a>
+<a class="text-stone-400 dark:text-stone-600 hover:text-[#b90014] transition-colors" href="#">Privacy Shield</a>
+<a class="text-stone-400 dark:text-stone-600 hover:text-[#b90014] transition-colors" href="#">Compliance</a>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CarMates Admin - Upload Success</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#ffb4ac",
+                    "tertiary-fixed-dim": "#adc7ff",
+                    "surface-dim": "#dbdad5",
+                    "on-tertiary-fixed": "#001a41",
+                    "surface": "#fbf9f4",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-surface-variant": "#5d3f3c",
+                    "on-secondary-fixed-variant": "#474747",
+                    "surface-container-high": "#eae8e3",
+                    "secondary-container": "#e4e2e1",
+                    "surface-container-highest": "#e4e2dd",
+                    "on-tertiary-fixed-variant": "#004493",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "on-secondary-container": "#656464",
+                    "on-primary-fixed-variant": "#93000d",
+                    "secondary": "#5f5e5e",
+                    "error": "#ba1a1a",
+                    "inverse-on-surface": "#f2f1ec",
+                    "tertiary": "#0057b9",
+                    "surface-bright": "#fbf9f4",
+                    "primary-fixed-dim": "#ffb4ac",
+                    "on-primary-fixed": "#410002",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#fff9f8",
+                    "outline": "#926e6b",
+                    "on-surface": "#1b1c19",
+                    "inverse-surface": "#30312e",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e4e2dd",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "on-background": "#1b1c19",
+                    "tertiary-container": "#006fe8",
+                    "surface-tint": "#c00015",
+                    "secondary-fixed": "#e4e2e1",
+                    "on-tertiary-container": "#fbfaff",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#ffdad6",
+                    "primary": "#b90014",
+                    "background": "#fbf9f4",
+                    "tertiary-fixed": "#d8e2ff",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#e7bdb8",
+                    "primary-container": "#e31b23",
+                    "surface-container-low": "#f5f3ee",
+                    "surface-container": "#f0eee9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "display": ["Plus Jakarta Sans"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col items-center">
+<!-- TopNavBar -->
+<header class="bg-[#fbf9f4]/80 dark:bg-stone-900/80 backdrop-blur-xl docked full-width top-0 sticky z-50 flex justify-between items-center w-full px-6 py-4">
+<div class="flex items-center gap-4">
+<img alt="CarMates Logo" class="h-8 w-auto" data-alt="A professional and sleek corporate logo for a high-end car dealership management platform named CarMates. The logo features a minimalist automotive silhouette integrated with a friendly handshake symbol, rendered in vibrant primary red and deep charcoal. The visual style is clean, modern, and trustworthy, set against a bright, warm off-white background that matches a premium concierge aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbftQMhUO6EBbnWNMty3mFvu7ObWiPEXmmbP15ZAMzAOaC2UiMT0ipeSjuWxT_fGrp6t-OOAQik_RFhEokyUxGZ-SOn6HRlH4qIfTEaC5vSdCNn73ow8FlzU3FWJgZp_d5kDYqH4MLE35lZ4TWoilrf0WIK63YI7PfzT0m3V0AvHvgk9xs9I77WO6Dkn_N1RHE_7SQN2KMFAOErGNESPp9EvcrNOQLF79_9-wPXk2DDb_UmBhF4kgY422G9zWTM9Kp6uOy6OMqZ_U"/>
+<span class="text-xl font-black text-[#b90014] dark:text-[#e31b23] uppercase tracking-tighter">The Mate Dashboard</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-8">
+<a class="text-stone-500 dark:text-stone-400 font-medium hover:text-[#b90014] transition-colors duration-200" href="#">Dashboard</a>
+<a class="text-stone-500 dark:text-stone-400 font-medium hover:text-[#b90014] transition-colors duration-200" href="#">Inventory</a>
+<a class="text-[#b90014] dark:text-[#e31b23] font-bold border-b-2 border-[#b90014]" href="#">Bulk Upload</a>
+</div>
+<div class="flex items-center gap-3 border-l border-outline-variant/30 pl-6">
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary transition-colors">notifications</span>
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary transition-colors">settings</span>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="Administrator profile" data-alt="A professional headshot of a friendly car dealership administrator in his late 30s, wearing a smart casual blazer. He has a warm, helpful smile that conveys trustworthiness and expertise. The lighting is soft and natural, with a blurred high-end showroom background, adhering to the humanistic concierge design language of warmth and premium service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOpb_qglLLGh3QvH6nQ47IBQ4uK2jhqU7F4uzX3bHGrYraFM0A01lgvL0VrBifbXQO4ED0iukERNIoAsraZckWZSva-teSmDr5pMwL_wVcZbO3XbY9vbzndD_4iXdA8Lid181EZcQt-5ey1K6JlYp9gRm3QjMvVVHvfe68QRY86VYKa6DkmcyHB_btYyZLmEDBTn5xb8EhI9Yq70sgrlne0VsG9rjRmQ4kSHwotT3ux2WHJCCkUzoCRPZWR4emrPDbbgFoCGf3rSs"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl w-full px-6 py-12 flex flex-col items-center">
+<!-- Success Hero Section -->
+<div class="w-full mb-16 text-center">
+<div class="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mb-6">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h1 class="text-5xl font-extrabold tracking-tight text-on-surface mb-4">Great work, Mate!</h1>
+<p class="text-xl text-secondary max-w-2xl mx-auto leading-relaxed">
+                Your bulk upload was processed successfully. 150 listings have been added to your digital lot and are being prepared for their new owners.
+            </p>
+</div>
+<!-- Result Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 w-full mb-12">
+<!-- Summary Card -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-xl p-8 shadow-[32px_0_64px_-20px_rgba(27,28,25,0.06)] flex flex-col justify-between">
+<div>
+<h2 class="text-2xl font-bold mb-8">Processing Summary</h2>
+<div class="grid grid-cols-2 gap-12">
+<div class="flex flex-col">
+<span class="text-sm font-bold uppercase tracking-widest text-tertiary mb-1">Live Listings</span>
+<span class="text-6xl font-black text-on-surface">142</span>
+<div class="mt-4 flex items-center gap-2 text-green-600 font-bold">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span>Visible to Customers</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold uppercase tracking-widest text-primary mb-1">Pending Review</span>
+<span class="text-6xl font-black text-on-surface">8</span>
+<div class="mt-4 flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+<span>Duplicate VINs detected</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-surface-container-highest flex items-center gap-4">
+<div class="bg-surface-container-high p-4 rounded-xl flex items-center gap-3 flex-1">
+<span class="material-symbols-outlined text-tertiary">info</span>
+<p class="text-sm text-secondary leading-snug">
+                            Duplicate VINs were flagged automatically to prevent listing errors. Our system identified 8 vehicles that might already be in your inventory.
+                        </p>
+</div>
+</div>
+</div>
+<!-- The Companion Widget -->
+<div class="md:col-span-4 bg-surface-container-low rounded-xl p-8 flex flex-col items-center text-center relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-tertiary"></div>
+<div class="mb-6 mt-4">
+<div class="w-24 h-24 rounded-full bg-tertiary-fixed p-1 mb-4">
+<img alt="Sarah, your Mate Companion" class="w-full h-full rounded-full object-cover" data-alt="A professional and friendly portrait of a female automotive concierge named Sarah. She has a bright, approachable expression and is dressed in a professional business-casual outfit. She is set against a warm, sun-drenched office background with subtle automotive sketches on the wall. The mood is helpful, warm, and expertly focused, aligning with the human-centric design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLakfgQjfm4UxAkEzqvKmS5A9c1-eOt-BzBzXL1lJC48kbZ67chnQJWYz-mnyoPuR1Uf5RRf3OmkCjhuENSDXhs71KMsqGPZcMRXnF1bP514JMvLsjp-K9Thc15JOKMauwDU0CDS-M3YFpY0Wt-Wh_LsWF-jLtdmoEZlM6OLf5vQrVcCJScQtVRfSwzAsdj_EXCd7C1Nv6MV5zbR0QiKZsd_Cp8i3_9rwqhgpGNLFXQJvnP1mGilafEk4iHV7uGfFhTyUUipXlmkw"/>
+</div>
+<h3 class="text-xl font-bold">Sarah is here to help</h3>
+<p class="text-sm text-secondary font-medium">Your Dedicated Inventory Mate</p>
+</div>
+<p class="text-sm text-on-surface leading-relaxed mb-6">
+                    "I've flagged the duplicates for you. Want to review them together, or should I archive them for now?"
+                </p>
+<button class="w-full py-3 bg-on-surface text-surface rounded-full font-bold text-sm hover:scale-[1.02] transition-transform flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">chat_bubble</span>
+                    Chat with Sarah
+                </button>
+</div>
+</div>
+<!-- Detailed Review List (Soft Inset Style) -->
+<div class="w-full bg-surface-container-low rounded-xl p-8 mb-12">
+<h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">warning</span>
+                Review Required: 8 Flagged Listings
+            </h2>
+<div class="space-y-4">
+<!-- Listing Row -->
+<div class="bg-surface-container-lowest p-6 rounded-lg flex items-center justify-between group hover:shadow-lg transition-all duration-300">
+<div class="flex items-center gap-6">
+<div class="w-24 h-16 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="BMW M4" class="w-full h-full object-cover" data-alt="A stunning side profile of a modern dark blue BMW M4 parked on a sunlit suburban driveway. The lighting is warm golden hour, emphasizing the car's sleek lines and premium finish. The image feels aspirational yet grounded in reality, following the 'cars in the wild' photography guidelines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjKjKANmut6THQYqg9BB26j8aBUkNBr86OgMhFtCQBh2o1Jo7FpaHalhgNEbmYqYzF3Xyxf40ECoM90T_CpIHH5i77AUbsKoYv-Q71NvuowUjgXcXe-oFb9Z3fh4G794a7W0SK9LhJPRCLXMmhTgUgBFS6FF9_Pux8SOi2zl8WxX8OnHvmNWU4lBKGyME9A8zS_mFA6_XxT5CWG0I28ct1lnZIixFk2ZPD30Qy88yXg9_WHt5ewFqNt50n7NxzYYC0XeQYpf6X63o"/>
+</div>
+<div>
+<p class="text-lg font-bold">2023 BMW M4 Competition</p>
+<p class="text-sm text-secondary flex items-center gap-2">
+<span class="font-mono bg-surface-container-high px-2 py-0.5 rounded">VIN: WBS53AY0XP...</span>
+<span class="text-primary font-bold">• Reason: Exact Duplicate</span>
+</p>
+</div>
+</div>
+<div class="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="px-5 py-2 rounded-full border border-outline-variant text-sm font-bold hover:bg-surface-container-high">Ignore</button>
+<button class="px-5 py-2 rounded-full bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20">Edit Details</button>
+</div>
+</div>
+<!-- Listing Row -->
+<div class="bg-surface-container-lowest p-6 rounded-lg flex items-center justify-between group hover:shadow-lg transition-all duration-300">
+<div class="flex items-center gap-6">
+<div class="w-24 h-16 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Porsche 911" class="w-full h-full object-cover" data-alt="A classic silver Porsche 911 being detailed in a brightly lit, high-end garage. A mechanic's hand is visible polishing the hood, emphasizing the human connection and care. The mood is one of meticulous craftsmanship and professional pride." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtc3COwXt5F79QXh28y5UPL4vV6GvBcEp43OqFEgLsvnvJOLjcddPdmfrZ0oMX8pWYYoESe0hFIQw0hd6j6xmVCQyOKB-Zp4y3kf1u7j3rRw2f2_h2HRDtpe4XOJYxL-l9nrGExxgqVAGXxJBFuuA405RyZ83U29QIrZ9BJBm5AJ_m2XksWo4lvVk-nz-yvOg52IXmb31xy6FyvtfleLklxEMqIUI9j7i_frSZeCvt1VR67ZbQNxh9p-ydGd9h21du7nQB3mfvuBc"/>
+</div>
+<div>
+<p class="text-lg font-bold">2021 Porsche 911 Carrera S</p>
+<p class="text-sm text-secondary flex items-center gap-2">
+<span class="font-mono bg-surface-container-high px-2 py-0.5 rounded">VIN: WP0AA2A92M...</span>
+<span class="text-primary font-bold">• Reason: Partial Data Match</span>
+</p>
+</div>
+</div>
+<div class="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="px-5 py-2 rounded-full border border-outline-variant text-sm font-bold hover:bg-surface-container-high">Ignore</button>
+<button class="px-5 py-2 rounded-full bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20">Edit Details</button>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 py-4 text-primary font-bold hover:underline">View All 8 Flagged Listings</button>
+</div>
+<!-- Action Bar -->
+<div class="w-full flex flex-col md:flex-row items-center justify-center gap-6 pb-20">
+<button class="w-full md:w-auto px-12 py-5 rounded-full border-2 border-primary text-primary font-bold text-lg hover:bg-primary/5 transition-all hover:scale-[1.02]">
+                Upload More
+            </button>
+<button class="w-full md:w-auto px-12 py-5 rounded-full bg-gradient-to-r from-primary to-primary-container text-white font-bold text-lg shadow-xl shadow-primary/25 hover:scale-[1.02] transition-all">
+                Go to Inventory
+            </button>
+</div>
+</main>
+<!-- Success Message Toast (Bottom Right) -->
+<div class="fixed bottom-8 right-8 bg-on-surface text-surface-container-lowest px-6 py-4 rounded-xl shadow-2xl flex items-center gap-4 z-50">
+<div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div>
+<p class="font-bold text-sm">Upload Successful</p>
+<p class="text-xs opacity-70">150 files processed in 4.2s</p>
+</div>
+</div>
+</body></html>

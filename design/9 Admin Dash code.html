@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CarMates Admin — The Humanistic Concierge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f2f1ec",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#ffb4ac",
+                        "tertiary-fixed": "#d8e2ff",
+                        "tertiary-container": "#006fe8",
+                        "surface-dim": "#dbdad5",
+                        "on-error-container": "#93000a",
+                        "background": "#fbf9f4",
+                        "on-tertiary-fixed": "#001a41",
+                        "surface-container-high": "#eae8e3",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#93000d",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "outline-variant": "#e7bdb8",
+                        "on-surface": "#1b1c19",
+                        "primary": "#b90014",
+                        "on-primary-container": "#fff9f8",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e4e2dd",
+                        "outline": "#926e6b",
+                        "on-tertiary-container": "#fbfaff",
+                        "surface-container": "#f0eee9",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#c00015",
+                        "secondary-container": "#e4e2e1",
+                        "primary-fixed": "#ffdad6",
+                        "on-secondary-fixed-variant": "#474747",
+                        "tertiary": "#0057b9",
+                        "primary-fixed-dim": "#ffb4ac",
+                        "surface-bright": "#fbf9f4",
+                        "tertiary-fixed-dim": "#adc7ff",
+                        "surface": "#fbf9f4",
+                        "surface-container-low": "#f5f3ee",
+                        "secondary-fixed": "#e4e2e1",
+                        "on-surface-variant": "#5d3f3c",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#410002",
+                        "on-background": "#1b1c19",
+                        "secondary": "#5f5e5e",
+                        "on-tertiary-fixed-variant": "#004493",
+                        "on-error": "#ffffff",
+                        "primary-container": "#e31b23",
+                        "surface-variant": "#e4e2dd",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#656464",
+                        "inverse-surface": "#30312e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "display": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-header { backdrop-filter: blur(20px); }
+    </style>
+</head>
+<body class="bg-background text-on-surface flex min-h-screen">
+<!-- SideNavBar Component -->
+<aside class="flex flex-col fixed left-0 top-0 h-full z-40 bg-[#fbf9f4] dark:bg-stone-950 h-screen w-72 rounded-r-[1.5rem] border-none shadow-[32px_0_64px_-20px_rgba(27,28,25,0.06)]">
+<div class="px-8 py-10">
+<div class="flex items-center gap-3 mb-10">
+<img alt="CarMates Brand Logo" class="h-10 w-auto" data-alt="The official CarMates.com.au logo featuring clean, modern typography and a subtle automotive-inspired emblem. The logo is rendered in a deep, professional primary red against a warm cream background, embodying the 'Mateship' brand identity with its approachable yet authoritative aesthetic. Soft lighting highlights the matte texture of the logo mark." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-H9SIK5JCjCFW37d7XFKKUa-kVU4PWlxqwkQhX2dXwIB3wwvQs5fFSYtz7DHmj5cPJ16P-niQimAtJF85rmVQWdlI0fXexpZVvhgg187ni2_QTxvCsMNRN_jVcnhPNjlkehJYD6vK_CYB_jGplKGjm1KZid8ztJr9OFyD4XKkyKrzltzEv6YG1FFcdoHowATEnOj7PmlWyPSj9KC6LC-wjvi7jbefj56n0XMS3uDQX6A1QUCTSOcobGFCVxVHJWOplKyr3ZkjZWY"/>
+<span class="text-2xl font-black text-[#b90014] tracking-tighter">CarMates Admin</span>
+</div>
+<nav class="space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl text-[#b90014] dark:text-red-400 font-bold border-r-4 border-[#b90014] bg-stone-100/50 dark:bg-stone-800/50 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-['Plus_Jakarta_Sans'] tracking-tight">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl text-stone-500 dark:text-stone-400 hover:text-[#b90014] hover:bg-stone-100 dark:hover:bg-stone-900 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">directions_car</span>
+<span class="font-['Plus_Jakarta_Sans'] tracking-tight">Listings</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl text-stone-500 dark:text-stone-400 hover:text-[#b90014] hover:bg-stone-100 dark:hover:bg-stone-900 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">dynamic_feed</span>
+<span class="font-['Plus_Jakarta_Sans'] tracking-tight">Bulk Actions</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl text-stone-500 dark:text-stone-400 hover:text-[#b90014] hover:bg-stone-100 dark:hover:bg-stone-900 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">contact_support</span>
+<span class="font-['Plus_Jakarta_Sans'] tracking-tight">Support Hub</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl text-stone-500 dark:text-stone-400 hover:text-[#b90014] hover:bg-stone-100 dark:hover:bg-stone-900 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">settings_accessibility</span>
+<span class="font-['Plus_Jakarta_Sans'] tracking-tight">Admin Settings</span>
+</a>
+</nav>
+<div class="mt-12">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-4 rounded-full font-bold shadow-lg flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined">add</span>
+<span>New Listing</span>
+</button>
+</div>
+</div>
+<div class="mt-auto p-8 border-t border-stone-200/50">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-tertiary-fixed flex-shrink-0">
+<img alt="Senior Admin Mate" class="w-full h-full object-cover" data-alt="A warm, high-quality headshot of a senior automotive advisor in his late 40s. He has a friendly, trustworthy expression and is dressed in professional yet accessible business-casual attire. The background is a soft-focus automotive workshop bathed in golden afternoon sunlight, reinforcing the CarMates theme of human expertise and professional care." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb_WZmM7B55miuufmVvWcDMXIRePMf1txk1paIjuIWogEw4jogeLjh5y7PvDz5hqz6tPw5Wy9YaS7O7DhkRmU2MX-FRROutdNHtAONd6KEh1UHPxasXHGy-GePsQNaTkYixJX0ZBeV-1PgmVmllSyOh_BVVbaDXx8tpyBLs86TOTIlVnY0f1YeCzV3Z8FaMD7ijxA83lbqw_N-BdsuzLDhztnOoFAEMoYkx-mkEBQTI8K0FFxMDQ-B2Q9zOiDWne5mhQbxNqJ6x4o"/>
+</div>
+<div>
+<p class="font-bold text-on-surface leading-none">Senior Admin Mate</p>
+<p class="text-xs text-stone-500 mt-1">The Humanistic Concierge</p>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-4 py-2 text-stone-500 hover:text-[#b90014] transition-colors" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+<span class="text-sm font-semibold">Help Center</span>
+</a>
+<a class="flex items-center gap-4 py-2 text-stone-500 hover:text-[#b90014] transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm font-semibold">Logout</span>
+</a>
+</nav>
+</div>
+</aside>
+<main class="ml-72 flex-1 flex flex-col min-h-screen">
+<!-- TopNavBar Component -->
+<header class="flex items-center justify-between px-12 ml-72 w-[calc(100%-18rem)] w-full h-20 sticky top-0 z-30 bg-[#fbf9f4]/80 dark:bg-stone-950/80 backdrop-blur-xl flat no-line architecture">
+<div class="flex items-center flex-1 max-w-2xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-stone-400">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-high border-none rounded-xl focus:ring-2 focus:ring-tertiary/20 text-on-surface placeholder-stone-500 transition-all font-['Manrope']" placeholder="Search for listings, mates, or sales..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6 ml-8">
+<span class="text-xl font-bold text-stone-900 dark:text-stone-100 font-['Plus_Jakarta_Sans']">Admin Lounge</span>
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-stone-100 transition-colors text-stone-600">
+<span class="material-symbols-outlined">notifications_active</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-stone-100 transition-colors text-stone-600">
+<span class="material-symbols-outlined">chat_bubble_outline</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden cursor-pointer hover:scale-[1.02] duration-200">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="A portrait of a confident female operations manager with a warm, professional smile. She is standing in a brightly lit, modern office environment with subtle hints of automotive engineering in the background. The lighting is soft and natural, emphasizing a clean, light-mode aesthetic that aligns with the premium 'Humanistic Concierge' design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxLNErZLTw5CKx2fL6pwqUerrWf_tj1A7Ip5heYGwKbyaUYyUoFZXJGHq_pxIe9CVDj4Yrwp8GUR-ubdlXJrMrfRqLnLv6nm7CRZEEZTUMCTufjOAqQjte_DBp3UwPK8ddH62Vsiln7656ofGRPr8x87DnLMIHdo0FgJcglrXQz2JfBh_I8HFBOWHnlZ9MpOxWPqcXU4fUha_s9wIkbSf07cqkpjcEJwyd5Ex84Tv7ZE7FfGK_SqpGikdGLEtqOr8FcKaPUZFfAxk"/>
+</div>
+</div>
+</div>
+</header>
+<div class="p-12 space-y-10">
+<!-- Summary Header / Stats -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[32px_0_64px_-20px_rgba(27,28,25,0.06)] relative overflow-hidden group">
+<div class="relative z-10">
+<p class="text-stone-500 font-bold uppercase tracking-widest text-xs mb-2">Total Listings</p>
+<h3 class="text-4xl font-extrabold text-on-surface">1,482</h3>
+<p class="text-emerald-600 font-bold text-sm mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +12% from last month
+                        </p>
+</div>
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-8xl text-stone-100 transition-transform group-hover:scale-110">directions_car</span>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[32px_0_64px_-20px_rgba(27,28,25,0.06)] relative overflow-hidden group">
+<div class="relative z-10">
+<p class="text-stone-500 font-bold uppercase tracking-widest text-xs mb-2">Active Leads</p>
+<h3 class="text-4xl font-extrabold text-on-surface">324</h3>
+<p class="text-tertiary font-bold text-sm mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">group</span> High engagement today
+                        </p>
+</div>
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-8xl text-stone-100 transition-transform group-hover:scale-110">contact_support</span>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[32px_0_64px_-20px_rgba(27,28,25,0.06)] relative overflow-hidden group border-b-4 border-primary">
+<div class="relative z-10">
+<p class="text-stone-500 font-bold uppercase tracking-widest text-xs mb-2">Pending Sales</p>
+<h3 class="text-4xl font-extrabold text-on-surface">89</h3>
+<p class="text-primary font-bold text-sm mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">priority_high</span> Action required: 12
+                        </p>
+</div>
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-8xl text-stone-100 opacity-50 transition-transform group-hover:scale-110">sell</span>
+</div>
+</section>
+<!-- Main Content: Car Listings Table -->
+<section class="bg-surface-container-lowest rounded-xl shadow-[32px_0_64px_-20px_rgba(27,28,25,0.06)] overflow-hidden">
+<!-- Table Controls -->
+<div class="p-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-6">
+<h2 class="text-2xl font-black text-on-surface tracking-tight font-display">Active Inventory</h2>
+<div class="flex items-center gap-2 bg-stone-100 rounded-full px-4 py-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-bold text-stone-600">LIVE SYNC</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-3 rounded-full bg-surface-container-highest text-on-surface font-bold text-sm flex items-center gap-2 hover:scale-[1.02] transition-transform">
+<span class="material-symbols-outlined text-sm">delete</span>
+                            Bulk Delete
+                        </button>
+<button class="px-6 py-3 rounded-full bg-surface-container-highest text-on-surface font-bold text-sm flex items-center gap-2 hover:scale-[1.02] transition-transform">
+<span class="material-symbols-outlined text-sm">update</span>
+                            Bulk Update
+                        </button>
+<button class="px-8 py-3 rounded-full bg-on-surface text-surface font-bold text-sm flex items-center gap-2 hover:scale-[1.02] transition-transform">
+<span class="material-symbols-outlined text-sm">upload</span>
+                            Bulk Upload
+                        </button>
+</div>
+</div>
+<!-- The Table -->
+<div class="overflow-x-auto">
+<table class="w-full border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-left">
+<th class="px-8 py-4 w-12">
+<input class="rounded-md border-stone-300 text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+</th>
+<th class="px-4 py-4 text-xs font-bold text-stone-400 uppercase tracking-widest font-label">Image</th>
+<th class="px-4 py-4 text-xs font-bold text-stone-400 uppercase tracking-widest font-label">Year</th>
+<th class="px-4 py-4 text-xs font-bold text-stone-400 uppercase tracking-widest font-label">Make &amp; Model</th>
+<th class="px-4 py-4 text-xs font-bold text-stone-400 uppercase tracking-widest font-label">Price</th>
+<th class="px-4 py-4 text-xs font-bold text-stone-400 uppercase tracking-widest font-label">Status</th>
+<th class="px-8 py-4 text-xs font-bold text-stone-400 uppercase tracking-widest font-label text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-stone-100">
+<!-- Row 1 -->
+<tr class="hover:bg-stone-50/50 transition-colors group">
+<td class="px-8 py-6">
+<input class="rounded-md border-stone-300 text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+</td>
+<td class="px-4 py-6">
+<div class="w-24 h-16 rounded-lg overflow-hidden bg-stone-100 border border-stone-200">
+<img alt="2023 Porsche 911" class="w-full h-full object-cover" data-alt="A sleek 2023 Porsche 911 parked in a minimalist, sun-drenched architectural garage. The lighting is high-end editorial, with soft shadows and warm reflections on the metallic paint. The image is framed to emphasize the clean lines and premium engineering of the vehicle, sitting against a neutral, sophisticated backdrop of light stone and wood textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL5jBgCDTC6EsZX9hhxrbdt4oBVlC3Aj0Yp0f6BvHjl6rp9uvv0Cdx5OEP75YeiqWgY238avDTApHkRlZ6T2nkQZhw73zOcM1WloogMeO5TmPblWto8cPBklA0gbyTEV6xOacrubvrY6qUkVXM5kFW3hQwW5XRhJkeBb3TVGqJGA57MPFieuvM6PFM-TGiQ_wI6B382yFuuZVJ_0X047I2sx0942mSTK0OK3XcSZp-PZ1LaktKWEzSlQ04ySA9dwXQbyBYpuVx26w"/>
+</div>
+</td>
+<td class="px-4 py-6 font-bold text-on-surface">2023</td>
+<td class="px-4 py-6">
+<p class="font-bold text-on-surface leading-tight">Porsche 911 Carrera S</p>
+<p class="text-xs text-stone-500">VIN: WP0AA2A9XPS2</p>
+</td>
+<td class="px-4 py-6">
+<p class="font-bold text-primary">$245,000</p>
+<p class="text-xs text-stone-400">Excl. On-road costs</p>
+</td>
+<td class="px-4 py-6">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-700">Available</span>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-10 h-10 rounded-full hover:bg-stone-100 text-stone-600 flex items-center justify-center">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button class="w-10 h-10 rounded-full hover:bg-stone-100 text-stone-600 flex items-center justify-center">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-stone-50/50 transition-colors group">
+<td class="px-8 py-6">
+<input class="rounded-md border-stone-300 text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+</td>
+<td class="px-4 py-6">
+<div class="w-24 h-16 rounded-lg overflow-hidden bg-stone-100 border border-stone-200">
+<img alt="2021 Toyota Hilux" class="w-full h-full object-cover" data-alt="A rugged 2021 Toyota Hilux parked on a scenic Australian coastal dirt track at sunrise. The lighting is golden and dramatic, catching the dust in the air. The truck is clean but positioned in its natural habitat, emphasizing reliability and adventure. The palette is dominated by warm earth tones and the deep blue of the ocean in the distant background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIdWrzFfcqo0tdJpiQCjGmv8S2g7ObMxaXL186Xy6bJaD0xHLvXiaB2Jlq7qXpj5qdb65lhIm22Xx4NsPGUQTsjuJIoWUndug-7F8SHjfEM16aJ2OAlcIvc_9z9pDDqqUstrzJG_r_dpQk-H8zV2qXRgI5kX_dXcXPN3qlTKKQoisoSch-cHUoNTuMCmA515HQVwp2B-X1WgHXmA7QuDvJWUGbR01s07GYKWLIczoEtTdoIQRLyXFIqLm_kdgoeRaZkwls42emIdo"/>
+</div>
+</td>
+<td class="px-4 py-6 font-bold text-on-surface">2021</td>
+<td class="px-4 py-6">
+<p class="font-bold text-on-surface leading-tight">Toyota Hilux Rogue</p>
+<p class="text-xs text-stone-500">VIN: AHTFZ29G703</p>
+</td>
+<td class="px-4 py-6">
+<p class="font-bold text-primary">$68,900</p>
+<p class="text-xs text-stone-400">Drive Away</p>
+</td>
+<td class="px-4 py-6">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-700">Under Offer</span>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-10 h-10 rounded-full hover:bg-stone-100 text-stone-600 flex items-center justify-center">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button class="w-10 h-10 rounded-full hover:bg-stone-100 text-stone-600 flex items-center justify-center">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-stone-50/50 transition-colors group">
+<td class="px-8 py-6">
+<input class="rounded-md border-stone-300 text-primary focus:ring-primary w-5 h-5" type="checkbox"/>
+</td>
+<td class="px-4 py-6">
+<div class="w-24 h-16 rounded-lg overflow-hidden bg-stone-100 border border-stone-200">
+<img alt="2022 Tesla Model 3" class="w-full h-full object-cover" data-alt="A pristine white 2022 Tesla Model 3 charging at a modern, high-tech station in an urban setting. The image uses cool blues and crisp whites, conveying innovation and cleanliness. The lighting is flat and bright, mimicking a studio shoot, while the surrounding environment remains minimalist and uncluttered to focus on the vehicle's tech-forward identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8jMFvPQqmiljZrOBjpXAomIPtGDyO-3KL2IXqaPJruNjvqk2O9BJ55ggi_HxEOVJVBVfl8wmZ8KKwzF1ISJk8s0Zai1N5HaH47gJJl1hbYpIkaS7UWDu2GSIfKlOqXWFuh-kmJfS7csF9Y33wAUu-gmvRTglDS-aXm9xjhKoUXD4Q1t8YeZ7F3E235I7976Iek9r4903bw6NATa3H0MWZ9inDviD4Z1UiE1wEMCXe1zF9qmp6BHymc-IJQkOnXF4WNHhxr5Guvog"/>
+</div>
+</td>
+<td class="px-4 py-6 font-bold text-on-surface">2022</td>
+<td class="px-4 py-6">
+<p class="font-bold text-on-surface leading-tight">Tesla Model 3 Performance</p>
+<p class="text-xs text-stone-500">VIN: 5YJ3E1EA6NF</p>
+</td>
+<td class="px-4 py-6">
+<p class="font-bold text-primary">$82,000</p>
+<p class="text-xs text-stone-400">Incl. Luxury Car Tax</p>
+</td>
+<td class="px-4 py-6">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-700">Available</span>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-10 h-10 rounded-full hover:bg-stone-100 text-stone-600 flex items-center justify-center">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button class="w-10 h-10 rounded-full hover:bg-stone-100 text-stone-600 flex items-center justify-center">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination -->
+<div class="px-8 py-6 flex items-center justify-between border-t border-stone-100">
+<p class="text-sm text-stone-500 font-medium">Showing <span class="text-on-surface font-bold">1 - 10</span> of <span class="text-on-surface font-bold">1,482</span> listings</p>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 rounded-full border border-stone-200 flex items-center justify-center text-stone-400 hover:bg-stone-100 transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm">1</button>
+<button class="w-10 h-10 rounded-full hover:bg-stone-100 text-stone-600 flex items-center justify-center font-bold text-sm transition-colors">2</button>
+<button class="w-10 h-10 rounded-full hover:bg-stone-100 text-stone-600 flex items-center justify-center font-bold text-sm transition-colors">3</button>
+<button class="w-10 h-10 rounded-full border border-stone-200 flex items-center justify-center text-stone-600 hover:bg-stone-100 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+<!-- Floating Companion Widget (Unique System Component) -->
+<div class="fixed bottom-12 right-12 z-50">
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-2xl flex items-center gap-4 animate-bounce-slow">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-tertiary-fixed border-2 border-white">
+<img alt="Support Mate" class="w-full h-full object-cover" data-alt="A close-up headshot of a friendly Australian support technician wearing a modern headset. He has a warm, helpful expression and clear, bright eyes. The background is a soft-focus tech hub with a warm, inviting glow, perfectly representing the 'Reliable Companion' and 'Mateship' ethos of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2xmrYckCmJUCBJ078x5kgF2ESR4Ugq_9M2mEPTgZ1Z8YIqimqKi_bvB6zyic44Wb8tpF1XTId5LhnC0-RZlEwWPTgysnaMvx8ERXRijkPX98Z_wsKplGvZ7mYasb3oANyFGxG5Tuo2HZc_owaixqkKGa7vYoruxmCNc9gxxtZYJQHYuOpCa51IGv8xWTtsHucdZ8Do_0DQDUfs7uMyDfSIu9-EE_l382E8C7MR1jF3hNiOqgfWhADzON-8rTxpup0bHRWNP2vpfI"/>
+</div>
+<div>
+<p class="text-xs font-bold text-stone-400 uppercase tracking-widest">Active Now</p>
+<p class="text-sm font-bold text-on-surface">Mate Dave is online</p>
+</div>
+<button class="bg-primary p-2 rounded-full text-on-primary">
+<span class="material-symbols-outlined">chat</span>
+</button>
+</div>
+</div>
+<!-- Footer Component -->
+<footer class="flex flex-col md:flex-row justify-between items-center px-12 ml-72 w-[calc(100%-18rem)] py-8 mt-auto bg-stone-50 dark:bg-stone-950 border-t border-stone-200/50 dark:border-stone-800/50">
+<p class="font-['Manrope'] text-xs uppercase tracking-widest text-stone-400 dark:text-stone-600 font-medium">© 2024 CarMates.com.au — Mateship built on trust.</p>
+<div class="flex gap-8 mt-4 md:mt-0">
+<a class="font-['Manrope'] text-xs uppercase tracking-widest text-stone-400 dark:text-stone-600 hover:text-[#b90014] transition-colors" href="#">Internal Wiki</a>
+<a class="font-['Manrope'] text-xs uppercase tracking-widest text-stone-400 dark:text-stone-600 hover:text-[#b90014] transition-colors" href="#">Privacy Shield</a>
+<a class="font-['Manrope'] text-xs uppercase tracking-widest text-stone-400 dark:text-stone-600 hover:text-[#b90014] transition-colors" href="#">Compliance</a>
+</div>
+</footer>
+</main>
+</body></html>

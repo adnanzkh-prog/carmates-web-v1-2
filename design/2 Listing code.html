@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e4e2dd",
+                    "secondary": "#5f5e5e",
+                    "error": "#ba1a1a",
+                    "surface-container": "#f0eee9",
+                    "on-primary-fixed-variant": "#93000d",
+                    "secondary-container": "#e4e2e1",
+                    "surface-tint": "#c00015",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#ffdad6",
+                    "inverse-surface": "#30312e",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "surface-container-low": "#f5f3ee",
+                    "on-tertiary-fixed": "#001a41",
+                    "tertiary": "#0057b9",
+                    "on-secondary-container": "#656464",
+                    "inverse-on-surface": "#f2f1ec",
+                    "on-tertiary-fixed-variant": "#004493",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "surface-container-high": "#eae8e3",
+                    "secondary-fixed": "#e4e2e1",
+                    "surface": "#fbf9f4",
+                    "on-primary-fixed": "#410002",
+                    "on-tertiary-container": "#fbfaff",
+                    "primary": "#b90014",
+                    "tertiary-fixed-dim": "#adc7ff",
+                    "surface-container-highest": "#e4e2dd",
+                    "outline-variant": "#e7bdb8",
+                    "outline": "#926e6b",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#1b1c19",
+                    "background": "#fbf9f4",
+                    "inverse-primary": "#ffb4ac",
+                    "on-tertiary": "#ffffff",
+                    "primary-container": "#e31b23",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#006fe8",
+                    "on-primary-container": "#fff9f8",
+                    "on-background": "#1b1c19",
+                    "surface-dim": "#dbdad5",
+                    "on-surface-variant": "#5d3f3c",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#d8e2ff",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#ffb4ac",
+                    "on-secondary-fixed-variant": "#474747",
+                    "surface-bright": "#fbf9f4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-inset-focus:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #d8e2ff;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopNavBar Shell -->
+<header class="fixed top-0 w-full z-50 h-20 bg-[#fbf9f4]/80 dark:bg-stone-950/80 backdrop-blur-xl shadow-xl shadow-stone-900/5 font-['Plus_Jakarta_Sans'] tracking-tight antialiased">
+<div class="flex items-center justify-between px-8 w-full max-w-screen-2xl mx-auto h-full">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2" href="#">
+<img alt="CarMates Official Logo" class="h-8 w-auto" data-alt="Official CarMates logo featuring a steering wheel with a handshake symbol and 'CarMates.com.au' text" src="https://lh3.googleusercontent.com/aida/ADBb0uj7VMaTXf_X0EEeyctv-JPeRXxAN_jY4y8XyCVPCFVG04YDzqrHrK6DRpTtsq2MGJyEAbrszK3klzyFG90bkBKFZEEnB2EgpuRygt0TRz1fSM_JJWdZNd5H9SK_S7z0uha4XbjV5n88Zc24QQjb491q9FI8XAVG-AT_0RplDn_xvy9M50xBCFCkHlJzRWD7Hnmp4-e2MvIL-Q-EKh2b_smjL4Yt7t9R2yIknO6tJXNCH2sdeEtKWw6EgPXWq1yyXAByYJDi_uA6"/>
+<span class="text-2xl font-extrabold tracking-tighter text-[#b90014] dark:text-[#ff4d5e]">CarMates</span>
+</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#b90014] dark:text-[#ff4d5e] font-bold border-b-2 border-[#b90014] pb-1 hover:scale-105 transition-all duration-300" href="#">Buy</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:scale-105 transition-all duration-300 hover:text-[#b90014]" href="#">Sell</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:scale-105 transition-all duration-300 hover:text-[#b90014]" href="#">Finance</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:scale-105 transition-all duration-300 hover:text-[#b90014]" href="#">Reviews</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:scale-105 transition-all duration-300 hover:text-[#b90014]" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-secondary hover:text-primary transition-colors">favorite</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-bold active:scale-95 duration-150 ease-in-out transition-all hover:scale-105 shadow-lg shadow-primary/20">List My Car</button>
+</div>
+</div>
+</header>
+<main class="pt-28 pb-20 px-8 max-w-screen-2xl mx-auto">
+<!-- Hero Search Section -->
+<div class="mb-12">
+<h1 class="text-5xl font-extrabold font-headline tracking-tighter mb-4 text-on-surface">Find Your Next Mate</h1>
+<p class="text-secondary text-lg max-w-2xl">Browse Australia's most trusted community-driven car marketplace. Transparent history, real mates, better deals.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-12">
+<!-- Sticky Filter Sidebar -->
+<aside class="w-full md:w-80 shrink-0">
+<div class="sticky top-28 space-y-6">
+<div class="bg-surface-container-low rounded-xl p-6 shadow-sm border border-outline-variant/10">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-bold text-lg">Filters</h3>
+<button class="text-sm font-bold text-primary uppercase tracking-wider">Reset</button>
+</div>
+<!-- Search Within -->
+<div class="relative mb-6">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-sm">search</span>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-container-high rounded-lg text-sm border-none soft-inset-focus placeholder:text-stone-400" placeholder="Search keywords..." type="text"/>
+</div>
+<!-- Accordion Filters -->
+<div class="space-y-6">
+<div class="space-y-3">
+<label class="text-xs font-bold text-secondary uppercase tracking-widest">Make &amp; Model</label>
+<select class="w-full px-4 py-3 bg-surface-container-high rounded-lg text-sm border-none soft-inset-focus appearance-none">
+<option>Any Make</option>
+<option>Toyota</option>
+<option>Mazda</option>
+<option>Ford</option>
+</select>
+<select class="w-full px-4 py-3 bg-surface-container-high rounded-lg text-sm border-none soft-inset-focus appearance-none">
+<option>Any Model</option>
+</select>
+</div>
+<div class="space-y-3">
+<label class="text-xs font-bold text-secondary uppercase tracking-widest">Price Range</label>
+<div class="grid grid-cols-2 gap-2">
+<input class="w-full px-4 py-3 bg-surface-container-high rounded-lg text-sm border-none soft-inset-focus" placeholder="Min $" type="text"/>
+<input class="w-full px-4 py-3 bg-surface-container-high rounded-lg text-sm border-none soft-inset-focus" placeholder="Max $" type="text"/>
+</div>
+</div>
+<div class="space-y-3">
+<label class="text-xs font-bold text-secondary uppercase tracking-widest">Year</label>
+<div class="grid grid-cols-2 gap-2">
+<select class="w-full px-4 py-3 bg-surface-container-high rounded-lg text-sm border-none soft-inset-focus"><option>Min</option></select>
+<select class="w-full px-4 py-3 bg-surface-container-high rounded-lg text-sm border-none soft-inset-focus"><option>Max</option></select>
+</div>
+</div>
+<div class="space-y-3">
+<label class="text-xs font-bold text-secondary uppercase tracking-widest">Fuel Type</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-full bg-surface-container-highest text-xs font-semibold text-on-surface transition-colors hover:bg-tertiary-fixed">Hybrid</button>
+<button class="px-4 py-2 rounded-full bg-primary text-xs font-semibold text-on-primary transition-colors">Electric</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-highest text-xs font-semibold text-on-surface transition-colors hover:bg-tertiary-fixed">Petrol</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-highest text-xs font-semibold text-on-surface transition-colors hover:bg-tertiary-fixed">Diesel</button>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 bg-on-surface text-surface py-4 rounded-xl font-bold transition-transform active:scale-95">Show 4,281 Results</button>
+</div>
+<!-- Companion Widget -->
+<div class="bg-tertiary-fixed rounded-xl p-6 relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-12 rounded-full bg-tertiary overflow-hidden border-2 border-surface">
+<img alt="Mate Advisor" data-alt="Close-up headshot of a friendly Australian automotive advisor smiling, warm natural outdoor lighting, professional yet approachable vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJKY3m9XGVLQfkmYqYIEPlbmmJwwTa_DYWMDbX9LGy6e2Wg78folNSlLSF6kkw94Ig3OefViBYLZRnvsNPTYABkWzIinQKde5ypPw9Qinw51kYvL7HgQF7oPRqELSdhOMxgXvzdHDShWg6HemuHxDqt7b899ulptWNFUTsKOLzFkNzSeXD-l4L1qU4k27xSRZmsKHRjelYPKhGxOAAj6Qdj_GNCUTn1mPbi5Pj7mURJMo10M3jLp8hRmdAYAJtiJZJlETfoNCpBHo"/>
+</div>
+<div>
+<p class="text-xs font-bold text-tertiary uppercase tracking-widest">The Mate's Advice</p>
+<p class="font-bold text-on-tertiary-fixed">Talk to Dave</p>
+</div>
+</div>
+<p class="text-sm text-on-tertiary-fixed-variant leading-relaxed">"Looking for a reliable family SUV? The 2021 Rav4 is our top pick for value this month."</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="flex-1">
+<!-- Sorting & Quick Filters -->
+<div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+<div class="flex items-center gap-3">
+<span class="text-secondary font-medium">Sort by:</span>
+<select class="bg-transparent border-none font-bold text-primary soft-inset-focus">
+<option>Recommended</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Newest Listed</option>
+</select>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="text-sm font-semibold">1,240 Mates available online</span>
+</div>
+</div>
+<!-- Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Listing Card 1 -->
+<div class="group bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-lg shadow-stone-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Sleek modern red luxury SUV parked on a coastal road in Australia at sunset, soft warm light hitting the curves of the car" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ9j86Uv2j-3bt6Z55cH-n_CSANgphN_SeAQ0LQ9qcrADpj8B1HlpW7Vu15GVlprAIF2nOvlGC48i6M3VGOVkmm1HSZZNjYSfqpUeVPztq0j2Wd-zQTmI4sFv9PNajT7nb9r0u7-b-LgugZPLHLMKWCm2EvwGUMpH_HW8JXjj_m7E6peKDNemCbOR0uq5IsEec_kBtofdvIyEKjRi4fqOfMt4HToxrS35VHrwuNQPgv2__9w66DKU0BQd64k7Y3daPUEpV2lu5Ejg"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-primary text-on-primary text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg">Mate's Pick</span>
+<span class="bg-tertiary text-on-tertiary text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg">New Arrival</span>
+</div>
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-2xl font-bold font-headline tracking-tight group-hover:text-primary transition-colors">2021 Mazda CX-5 Maxx Sport</h3>
+<p class="text-secondary text-sm font-medium">KF Series 2 Auto i-ACTIV AWD</p>
+</div>
+<div class="text-right">
+<p class="text-3xl font-black text-on-surface tracking-tighter">$34,990</p>
+<p class="text-[10px] text-secondary font-bold uppercase tracking-widest">Excl. Govt Charges</p>
+</div>
+</div>
+<div class="flex gap-6 mb-8 py-4 border-y border-outline-variant/10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">speed</span>
+<span class="text-sm font-bold">42,500 km</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">settings</span>
+<span class="text-sm font-bold">Automatic</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">local_gas_station</span>
+<span class="text-sm font-bold">Petrol</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed">
+<img class="w-full h-full object-cover rounded-full" data-alt="Portrait of a smiling private car seller, casual attire, natural sunlight, trustworthy and friendly appearance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT2CVjOF_cf67EWNzSibu_ttoOk50RRv3reTcG2a62v44sUFp4spmtyxPdk0Wf45ZEJLn7q_dIQDS69D2vpZezXzzfIDvXjQbQDdVXpDarYfWu77x5Hm5aujXDq35ZfmnPj7CnmZuQwzzqtE99naon17xlucWx7cM7WOBGts_tjfQpR78UBe_037iQVnM_D0Mo3mwQxUyoFo80fqHahTSr1UK7WggB1DnmtYw7Of34F0DBLVTnGCZp8qa1-xCAI-8P_xQQtU_spZE"/>
+</div>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">Private Seller • VIC</span>
+</div>
+<button class="bg-surface-container-highest px-6 py-3 rounded-full text-sm font-bold hover:bg-on-surface hover:text-surface transition-colors">View Details</button>
+</div>
+</div>
+</div>
+<!-- Listing Card 2 -->
+<div class="group bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-lg shadow-stone-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Silver modern electric sedan driving through a scenic Australian mountain pass, motion blur on background, bright airy lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADzSdH4yU-xBSIgKJtbXbiGl5_6cSKxloO9A-zdFGsUMil-ebeoOkBUXOQ3VKC0oWNFCEIv7TaU65jvqFz3W1wpg5iZNv7FhEf6xO8oxq80KJnvgz4npZr92h-G4F_7AY8l9SQmoXVwEqrEa6KtTSwMmqdZREyZVEUfnE0QyOAhVfnPx9rFBNYmo4fLA0ppvfAtx4L89GXGt7FsBgDOAmEpQlaRuWmFtUtMQl0EDstERQAOs0nQ3s8qNfaBOKWz_MZp_F5fDu9ugM"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-green-600 text-white text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg">Fuel Saver</span>
+</div>
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-2xl font-bold font-headline tracking-tight group-hover:text-primary transition-colors">2022 Tesla Model 3 RWD</h3>
+<p class="text-secondary text-sm font-medium">Auto Electric Sedan</p>
+</div>
+<div class="text-right">
+<p class="text-3xl font-black text-on-surface tracking-tighter">$52,400</p>
+<p class="text-[10px] text-secondary font-bold uppercase tracking-widest">Drive Away</p>
+</div>
+</div>
+<div class="flex gap-6 mb-8 py-4 border-y border-outline-variant/10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">speed</span>
+<span class="text-sm font-bold">12,100 km</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">settings</span>
+<span class="text-sm font-bold">Fixed Gear</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">bolt</span>
+<span class="text-sm font-bold">Electric</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-tertiary">verified_user</span>
+</div>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">Certified Dealer • NSW</span>
+</div>
+<button class="bg-surface-container-highest px-6 py-3 rounded-full text-sm font-bold hover:bg-on-surface hover:text-surface transition-colors">View Details</button>
+</div>
+</div>
+</div>
+<!-- Listing Card 3 -->
+<div class="group bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-lg shadow-stone-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Rugged white 4x4 pickup truck on a dirt track in the outback, dramatic shadows, dust trail, powerful and tough aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB6RVHp7jgDjW2d8XHh4vwfBKrm5P1uUZf2SXeWuggAwrd526TMgp8WM0sM6uGHJNfAj3z0R9_gYm9hDZ3rz8tzACqNfarioTWGAr7HM9_oA_o1-eV2kUqvuVlkK9XRDdgOmpQAsVcfVwhlyZi65Gqkc4eYdqCD2sB53ItsHhb55RLBjoKrhWoAlUH7F0bTmA9wZlhsmbB_pN7BL6ZtOqFyMSMbym5iYbT1yfab0fEWgtIeTwOFvorsCuxDgLlCZgJyLCBQfyMA8M"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-on-surface text-surface text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg">Off-Road Ready</span>
+</div>
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-2xl font-bold font-headline tracking-tight group-hover:text-primary transition-colors">2019 Toyota HiLux Rugged X</h3>
+<p class="text-secondary text-sm font-medium">Auto 4x4 Double Cab</p>
+</div>
+<div class="text-right">
+<p class="text-3xl font-black text-on-surface tracking-tighter">$58,880</p>
+<p class="text-[10px] text-secondary font-bold uppercase tracking-widest">Excl. Govt Charges</p>
+</div>
+</div>
+<div class="flex gap-6 mb-8 py-4 border-y border-outline-variant/10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">speed</span>
+<span class="text-sm font-bold">89,000 km</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">settings</span>
+<span class="text-sm font-bold">Automatic</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">local_gas_station</span>
+<span class="text-sm font-bold">Diesel</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed">
+<img class="w-full h-full object-cover rounded-full" data-alt="Professional mechanic profile photo, workshop background, friendly smile, expert appearance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACkirJnTd324qJCnbBvh4E4dRDTqB_ZGAGLnY4TTQaocd1fUJPiFqIzS4iF_oJelCwROH3yeHcJb6On3Tain0xVNDfffV25fmK2ojHOQzfQobArRmEmrQzEqtgf0iC476lul9xYmIf4SKy4HHSN65Mku-sPyAYOuPuBddCN9qOPavXyUUJTNJVaTj8pMD2_7Bk7aw9xkKCb38enQw4HxRglBw2Gtw2NK6QXZyBLp4X_LyJa6AIlDeE5pMCH7DhTDzxOpOuCSNkJtk"/>
+</div>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">Private Seller • QLD</span>
+</div>
+<button class="bg-surface-container-highest px-6 py-3 rounded-full text-sm font-bold hover:bg-on-surface hover:text-surface transition-colors">View Details</button>
+</div>
+</div>
+</div>
+<!-- Listing Card 4 -->
+<div class="group bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-lg shadow-stone-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Classic black sports car in a minimalist modern garage with soft overhead lighting, highlighting the shiny paint and sleek lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeT8RrEU9XJ0jr6c_tKekRhJlOZEb_SDQJh5WV0TKFbJndt5Lz3wK_DG9DJyRKZ9gg-MiYUIAASSE8K8kCgJkUEMmOO6wOsMjBdSN1SRPt_Essc_P7ADZpWxuIQKK7AkC1ZB5zsN9H_YNeVagwql2mnHVIOJ11MF8hNk4A_fS0gZFHEzN-3HtQ54lT7Ur_ltlyfEHVZlbEbNfDbj19APTWAcRCGlntNbYiT1CtcqzG_i8nq8Qj80fFolb2MkEFcnq4LELGYAUy_EY"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-primary text-on-primary text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg">Mate's Pick</span>
+</div>
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-2xl font-bold font-headline tracking-tight group-hover:text-primary transition-colors">2020 BMW 3 Series 330i</h3>
+<p class="text-secondary text-sm font-medium">M Sport G20 Auto</p>
+</div>
+<div class="text-right">
+<p class="text-3xl font-black text-on-surface tracking-tighter">$48,500</p>
+<p class="text-[10px] text-secondary font-bold uppercase tracking-widest">Drive Away</p>
+</div>
+</div>
+<div class="flex gap-6 mb-8 py-4 border-y border-outline-variant/10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">speed</span>
+<span class="text-sm font-bold">35,000 km</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">settings</span>
+<span class="text-sm font-bold">Automatic</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">local_gas_station</span>
+<span class="text-sm font-bold">Petrol</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-tertiary">verified_user</span>
+</div>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">Certified Dealer • WA</span>
+</div>
+<button class="bg-surface-container-highest px-6 py-3 rounded-full text-sm font-bold hover:bg-on-surface hover:text-surface transition-colors">View Details</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-16 flex items-center justify-center gap-2">
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-primary text-on-primary font-bold">1</button>
+<button class="w-12 h-12 rounded-full hover:bg-surface-container-high font-bold transition-colors">2</button>
+<button class="w-12 h-12 rounded-full hover:bg-surface-container-high font-bold transition-colors">3</button>
+<span class="px-2">...</span>
+<button class="w-12 h-12 rounded-full hover:bg-surface-container-high font-bold transition-colors">42</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full rounded-t-[2rem] mt-20 bg-[#fbf9f4] dark:bg-stone-950 border-t-0 bg-stone-100 dark:bg-stone-900 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-7xl mx-auto">
+<div class="space-y-6">
+<a class="flex items-center gap-2" href="#">
+<img alt="CarMates Official Logo" class="h-6 w-auto" data-alt="Official CarMates logo featuring a steering wheel with a handshake symbol and 'CarMates.com.au' text" src="https://lh3.googleusercontent.com/aida/ADBb0uj7VMaTXf_X0EEeyctv-JPeRXxAN_jY4y8XyCVPCFVG04YDzqrHrK6DRpTtsq2MGJyEAbrszK3klzyFG90bkBKFZEEnB2EgpuRygt0TRz1fSM_JJWdZNd5H9SK_S7z0uha4XbjV5n88Zc24QQjb491q9FI8XAVG-AT_0RplDn_xvy9M50xBCFCkHlJzRWD7Hnmp4-e2MvIL-Q-EKh2b_smjL4Yt7t9R2yIknO6tJXNCH2sdeEtKWw6EgPXWq1yyXAByYJDi_uA6"/>
+<span class="text-xl font-black text-stone-900 dark:text-stone-100">CarMates</span>
+</a>
+<p class="text-stone-500 dark:text-stone-400 normal-case tracking-normal">Making car buying feel like a handshake, not a transaction. Serving Australians since 2024.</p>
+</div>
+<div>
+<h4 class="text-stone-900 dark:text-white font-bold mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#b90014] transition-colors cursor-pointer hover:translate-x-1 duration-200 inline-block" href="#">Locations</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#b90014] transition-colors cursor-pointer hover:translate-x-1 duration-200 inline-block" href="#">About Us</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#b90014] transition-colors cursor-pointer hover:translate-x-1 duration-200 inline-block" href="#">Reviews</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-stone-900 dark:text-white font-bold mb-6">Support</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#b90014] transition-colors cursor-pointer hover:translate-x-1 duration-200 inline-block" href="#">Contact Us</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#b90014] transition-colors cursor-pointer hover:translate-x-1 duration-200 inline-block" href="#">FAQ</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#b90014] transition-colors cursor-pointer hover:translate-x-1 duration-200 inline-block" href="#">Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-stone-900 dark:text-white font-bold mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#b90014] transition-colors cursor-pointer hover:translate-x-1 duration-200 inline-block" href="#">Privacy Policy</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#b90014] transition-colors cursor-pointer hover:translate-x-1 duration-200 inline-block" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 pb-12">
+<p class="text-stone-400 dark:text-stone-600 text-xs text-center">© 2024 CarMates Australia. Built for Mateship.</p>
+</div>
+</footer>
+</body></html>

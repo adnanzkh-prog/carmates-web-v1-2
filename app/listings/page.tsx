@@ -58,26 +58,39 @@ export default async function ListingsPage({
   });
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
-      <div className="flex flex-col lg:flex-row gap-8">
-        <aside className="lg:w-1/4">
-          <FilterSidebar currentFilters={searchParams} />
-        </aside>
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-12">
+        {/* Page header */}
+        <div className="mb-8">
+          <h1 className="text-4xl font-black text-gray-900">Find Your Next Mate</h1>
+          <p className="text-gray-600 mt-2 max-w-2xl">
+            Browse Australia's most trusted community-driven car marketplace. Transparent history, real mates, better deals.
+          </p>
+          <p className="text-green-600 font-semibold mt-2">
+            🟢 {total} Mates available online
+          </p>
+        </div>
 
-        <main className="lg:w-3/4">
-          <div className="mb-6 rounded-3xl border border-slate-800 bg-slate-900 p-6 text-slate-100">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-              <div>
-                <p className="text-sm uppercase tracking-[0.3em] text-slate-400">Available cars</p>
-                <h1 className="text-3xl font-bold mt-2">{total} Mates available online</h1>
-              </div>
-              <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* Sidebar */}
+          <aside className="lg:w-1/4 flex-shrink-0">
+            <FilterSidebar currentFilters={searchParams} />
+          </aside>
+
+          {/* Main content */}
+          <main className="lg:w-3/4">
+            {/* Sort options */}
+            <div className="mb-8 flex items-center justify-between">
+              <p className="text-sm font-semibold text-gray-700">Sort by:</p>
+              <div className="flex gap-2">
                 {Object.entries(sortOptions).map(([key, option]) => (
                   <Link
                     key={key}
                     href={`/listings?${new URLSearchParams({ ...Object.fromEntries(params.entries()), sort: key }).toString()}`}
-                    className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-                      sort === key ? "bg-blue-600 text-white" : "bg-slate-800 text-slate-300 hover:bg-slate-700"
+                    className={`px-4 py-2 rounded-lg text-sm font-semibold transition ${
+                      sort === key
+                        ? "bg-red-700 text-white"
+                        : "bg-gray-200 text-gray-900 hover:bg-gray-300"
                     }`}
                   >
                     {option.label}
@@ -85,32 +98,34 @@ export default async function ListingsPage({
                 ))}
               </div>
             </div>
-          </div>
 
-          {listings.length === 0 ? (
-            <div className="rounded-3xl border border-slate-800 bg-slate-900 p-10 text-center text-slate-300">
-              <h2 className="text-2xl font-bold text-white">No results found</h2>
-              <p className="mt-2 text-slate-400">
-                We couldn’t find any vehicles matching your filters. Remove filters or browse all available cars.
-              </p>
-              <Link href="/listings" className="mt-6 inline-flex rounded-full bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700">
-                View all cars
-              </Link>
-            </div>
-          ) : (
-            <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {listings.map((car) => (
-                  <VehicleCard key={car.id} car={car} />
-                ))}
+            {listings.length === 0 ? (
+              <div className="rounded-2xl border border-gray-200 bg-gray-50 p-12 text-center">
+                <h2 className="text-2xl font-bold text-gray-900">No results found</h2>
+                <p className="mt-2 text-gray-600">
+                  We couldn't find any vehicles matching your filters. Remove filters or browse all available cars.
+                </p>
+                <Link href="/listings" className="mt-6 inline-flex rounded-full bg-red-700 px-6 py-3 font-semibold text-white hover:bg-red-800">
+                  View all cars
+                </Link>
               </div>
+            ) : (
+              <>
+                {/* Vehicle grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                  {listings.map((car) => (
+                    <VehicleCard key={car.id} car={car} />
+                  ))}
+                </div>
 
-              {totalPages > 1 && (
-                <Pagination currentPage={page} totalPages={totalPages} />
-              )}
-            </>
-          )}
-        </main>
+                {/* Pagination */}
+                {totalPages > 1 && (
+                  <Pagination currentPage={page} totalPages={totalPages} />
+                )}
+              </>
+            )}
+          </main>
+        </div>
       </div>
     </div>
   );
